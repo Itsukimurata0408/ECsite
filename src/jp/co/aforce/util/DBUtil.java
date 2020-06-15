@@ -1,11 +1,11 @@
 /**
  * DBUtil.java
- * 
+ *
  * データベースのアクセスに特化したユーティリティクラス。
  * 意図的にユーザ側に DB 関連のオブジェクトを操作させない様に隠蔽している。
- * 
+ *
  * トランザクション管理には対応していない。
- * 
+ *
  * 【使い方】
  * try {
  *   DBUtil.makeConnection();
@@ -13,13 +13,13 @@
  *   ...
  *   ResultSet resultSet = DBUtil.execute("select ...");
  *   if (resultSet != null) {
- *     ... 
+ *     ...
  *   }
  * } catch (Exception e) { ... }
  * } finally {
  *   DBUtil.closeConnection();
  * }
- * 
+ *
  * @author A-force Inc.
  */
 package jp.co.aforce.util;
@@ -38,13 +38,13 @@ public class DBUtil {
 	// データベース(MySQL)にアクセスする為の基本情報。XAMPPを使った時のデフォルトのまま。
 	private static String sqlDriver = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://localhost/";
-	private static String database = "database?useUnicode=true&characterEncoding=utf8";
+	private static String database = "ecsite?useUnicode=true&characterEncoding=utf8";
 	private static String user = "root";
 	private static String password = "";
 
 	// インスタンス化させない（インスタンス化する必要がないため）。
 	private DBUtil() {}
-	
+
 	/**
 	 * DBへのコネクションを張る。
 	 * @throws Exception
@@ -72,7 +72,7 @@ public class DBUtil {
 		}
 		stmt = conn.createStatement();
 	}
-	
+
 	/**
 	 * SQLを起動する。
 	 * @param sql SQL Query
@@ -88,7 +88,7 @@ public class DBUtil {
 		}
 		return rs;
 	}
-	
+
 	/**
 	 * コネクションをクローズする。
 	 * @throws Exception
@@ -111,7 +111,7 @@ public class DBUtil {
 				// コネクションが取得出来なくなるので注意
 				conn = null;
 			}
-			
+
 		// 通常はこのエクセプションの発生は考えにくい
 		// 仮に発生する状況が起きた時は、恐らくシステム・エラーが発生しているので
 		// 復旧する事は難しいと考えられるが、例外処理を記述しておくのが望ましい

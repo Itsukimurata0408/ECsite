@@ -11,12 +11,12 @@
   </welcome-file-list>
 
   <servlet>
-    <servlet-name>commonServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.CommonServlet</servlet-class>
+    <servlet-name>loginAdminServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlet.LoginAdminServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>commonServlet</servlet-name>
-    <url-pattern>/req</url-pattern>
+    <servlet-name>loginAdminServlet</servlet-name>
+    <url-pattern>/loginAdminServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
