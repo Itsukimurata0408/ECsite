@@ -38,7 +38,7 @@ public class DBUtil {
 	// データベース(MySQL)にアクセスする為の基本情報。XAMPPを使った時のデフォルトのまま。
 	private static String sqlDriver = "com.mysql.jdbc.Driver";
 	private static String url = "jdbc:mysql://localhost/";
-	private static String database = "database?useUnicode=true&characterEncoding=utf8";
+	private static String database = "ecsite?useUnicode=true&characterEncoding=utf8";
 	private static String user = "root";
 	private static String password = "";
 
