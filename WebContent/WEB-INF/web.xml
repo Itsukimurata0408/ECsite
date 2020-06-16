@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+version="2.4">
   <display-name>shopping</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -11,12 +14,12 @@
   </welcome-file-list>
 
   <servlet>
-    <servlet-name>commonServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.CommonServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>commonServlet</servlet-name>
-    <url-pattern>/req</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
