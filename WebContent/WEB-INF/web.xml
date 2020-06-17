@@ -14,12 +14,21 @@ version="2.4">
   </welcome-file-list>
 
   <servlet>
+
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>jp.co.aforce.servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
+
+    <servlet-name>loginAdminServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlet.LoginAdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginAdminServlet</servlet-name>
+    <url-pattern>/loginAdminServlet</url-pattern>
+
   </servlet-mapping>
 
 </web-app>
