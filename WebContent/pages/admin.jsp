@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-success
+<a href="register.jsp">商品登録</a>
+
 </body>
 </html>

@@ -19,4 +19,13 @@
     <url-pattern>/loginAdminServlet</url-pattern>
   </servlet-mapping>
 
+    <servlet>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/registerServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>
