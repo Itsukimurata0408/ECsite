@@ -9,27 +9,38 @@ html,body{
     Meiryo,
     sans-serif;
 }
+
+*{
+	padding:0px;
+	margin:0px;
+}
+
+
 header{
-	height:3%;
+	background-color:#F5F5F5;
+	height:4%;
 	width:100%;
 	position: relative;
+
 }
 
 button{
+	font-size: 27px;
 	position: absolute;
 	top: -6px;
 	left: 10px;
 }
 
 h4{
+	font-size: 17px;
 	position: absolute;
-	top: -18px;
+	top: -8x;
 	right: 10px
 }
 
 main{
-	background-color: #87CEFA;
-	height:97%;
+	background: linear-gradient(#05FBFF, #1E00FF);
+	height:96%;
 	width:100%;
 	font-size: 150%;
 
@@ -40,15 +51,24 @@ main{
 }
 
 h1{
+	color: white;
 	font-size: 30px;
+	margin: 20px;
 }
 
 form{
+	font-size: 28px;
 	background-color:#F5F5F5;
 	text-align: center;
-	padding: 30px;
+	padding: 40px;
+	margin: 20px;
+
 	border: double 5px;
 	border-radius: 20px;
 
 }
 
+.button{
+	font-size: 22px;
+	margin: 10px;
+}
