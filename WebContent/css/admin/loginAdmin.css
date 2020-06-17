@@ -2,15 +2,29 @@
 html,body{
 	height:100vh;
 	width:100%
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
 header{
 	height:3%;
 	width:100%;
-
+	position: relative;
 }
 
 button{
+	position: absolute;
+	top: -6px;
+	left: 10px;
+}
 
+h4{
+	position: absolute;
+	top: -18px;
+	right: 10px
 }
 
 main{
@@ -19,13 +33,22 @@ main{
 	width:100%;
 	font-size: 150%;
 
-	display: flex; /* 要素をflexboxに対応させる */
-  	align-items: center; /* 縦方向の中央揃え */
-  	justify-content: center; /* 横方向の中央揃え */
-  	flex-direction: column; /* 子要素の並びを上から下にする（要素の改行に対応） */
+	display: flex;
+  	align-items: center;
+   	justify-content: center;
+  	flex-direction: column;
 }
 
-h4{
-	text-align: right;
+h1{
+	font-size: 30px;
+}
+
+form{
+	background-color:#F5F5F5;
+	text-align: center;
+	padding: 30px;
+	border: double 5px;
+	border-radius: 20px;
 
 }
+
