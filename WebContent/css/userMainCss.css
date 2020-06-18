@@ -7,14 +7,16 @@ body{
 	text-align:center;
 }
 
-.icon,.detection_icon{
-	text-align: right;
+.header{
+text-align: right;
     padding: 10px;
+    color:  #fff;               /* 文字色 */
     margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;
 }
 
  /* === 検索全体のBOX (サンプル用) ============================ */
-.detection_icon{
+.sample3Area{
   position       : relative;
   width          : 250px;              /* BOXの幅               */
   height         : 40px;               /* BOXの高さ             */
@@ -25,7 +27,7 @@ body{
 }
 
  /* === テキスト入力欄のSTYLE設定 ============================= */
-.detection_text {
+.sample3Text {
   position       : absolute;
   display        : block;              /* ブロック化            */
   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
@@ -41,7 +43,7 @@ body{
 }
 
  /* === 検索ボタン欄のSTYLE設定 =============================== */
-.detection_button {
+.sample3Button {
   position       : absolute;
   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
   height         : 28px;               /* 入力の高さ            */
@@ -57,17 +59,17 @@ body{
 }
 
  /* === テキスト入力欄にフォーカスか来たとき ================== */
-.detection_text:focus {
+.sample3Text:focus {
   background     : #cfe7ff;            /* フォーカス時の背景色  */
 }
 
  /* === 検索ボタン欄にフォーカスか来たとき ==================== */
-.detection_button:hover {
+.sample3Button:hover {
   background     : #333;               /* フォーカス時の背景色  */
 }
 
  /* === 検索アイコンのSTYLE設定 =============================== */
-.detection_img {
+.sample3Img {
   display        : inline-block;       /* インラインブロック化  */
   width          : auto;               /* 幅は高さに合わせる    */
   height         : 16px;               /* 画像の高さ            */
@@ -76,6 +78,6 @@ body{
 }
 
  /* === IEの入力エリア右側×消し ============================== */
-.detection_text::-ms-clear {
+.sample3Text::-ms-clear {
   display        : none;               /* ×を消す              */
 }
