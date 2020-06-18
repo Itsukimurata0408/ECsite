@@ -1,0 +1,83 @@
+@charset "UTF-8";
+body{
+	background-color:#EEEEEE;
+}
+
+.top_photo{
+	text-align:center;
+}
+
+.header{
+text-align: right;
+    padding: 10px;
+    color:  #fff;               /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;
+}
+
+ /* === 検索全体のBOX (サンプル用) ============================ */
+.sample3Area{
+  position       : relative;
+  width          : 250px;              /* BOXの幅               */
+  height         : 40px;               /* BOXの高さ             */
+  text-align: right;
+  letter-spacing : 0.1em;              /* 文字間隔              */
+  font-weight    : bold;               /* 太字                  */
+  line-height    : 0;                  /* 標準の行高さ          */
+}
+
+ /* === テキスト入力欄のSTYLE設定 ============================= */
+.sample3Text {
+  position       : absolute;
+  display        : block;              /* ブロック化            */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 40px;               /* BOXの高さ             */
+  width          : 100%;               /* テキスト入力の幅      */
+  margin         : 0;                  /* 外余白                */
+  padding        : 0 45px 0 8px;       /* 内余白                */
+  border         : 2px solid #666;     /* 枠線　幅,実践,色      */
+  border-radius  : 6px;                /* 角丸                  */
+  color          : #333;               /* 文字色                */
+  font-size      : 18px;               /* フォントサイズ        */
+  outline        : 0;                  /* 入力の薄い枠を非表示  */
+}
+
+ /* === 検索ボタン欄のSTYLE設定 =============================== */
+.sample3Button {
+  position       : absolute;
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 28px;               /* 入力の高さ            */
+  margin         : 0;                  /* 外余白                */
+  padding        : 6px 10px;           /* 内余白                */
+  top            : 6px;                /* ボタン表示位置(上)    */
+  right          : 6px;                /* ボタン表示位置(右)    */
+  border         : none;               /* 枠線　幅,実践,色      */
+  border-radius  : 6px;                /* 右上下の角丸          */
+  background     : #666;               /* ボタンの色            */
+  color          : #fff;               /* 文字色                */
+  cursor         : pointer;            /* カーソル設定          */
+}
+
+ /* === テキスト入力欄にフォーカスか来たとき ================== */
+.sample3Text:focus {
+  background     : #cfe7ff;            /* フォーカス時の背景色  */
+}
+
+ /* === 検索ボタン欄にフォーカスか来たとき ==================== */
+.sample3Button:hover {
+  background     : #333;               /* フォーカス時の背景色  */
+}
+
+ /* === 検索アイコンのSTYLE設定 =============================== */
+.sample3Img {
+  display        : inline-block;       /* インラインブロック化  */
+  width          : auto;               /* 幅は高さに合わせる    */
+  height         : 16px;               /* 画像の高さ            */
+  margin         : 0;                  /* 余白                  */
+  vertical-align : middle;             /* 横の文字位置          */
+}
+
+ /* === IEの入力エリア右側×消し ============================== */
+.sample3Text::-ms-clear {
+  display        : none;               /* ×を消す              */
+}
