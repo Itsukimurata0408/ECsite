@@ -44,4 +44,14 @@ version="2.4">
     <url-pattern>/registerAdminServlet</url-pattern>
   </servlet-mapping>
 
+       <servlet>
+    <servlet-name>selectProbuctServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlet.SelectProbuctServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>selectProbuctServlet</servlet-name>
+    <url-pattern>/selectProbuctServlet</url-pattern>
+  </servlet-mapping>
+
+
 </web-app>
