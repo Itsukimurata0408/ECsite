@@ -15,12 +15,12 @@ version="2.4">
 
  <servlet>
 
-    <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.LoginServlet</servlet-class>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.UserLoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/LoginServlet</url-pattern>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
 
 
   </servlet-mapping>

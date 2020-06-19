@@ -14,7 +14,7 @@ import jp.co.aforce.models.LoginModel;
 // 親クラスに HttpServlet を指定する
 //これがないと waring がでる
 @SuppressWarnings("serial")
-public class LoginServlet extends HttpServlet {
+public class UserLoginServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -57,6 +57,7 @@ public class LoginServlet extends HttpServlet {
 			loginBean.setEmsg("ユーザ名またはパスワードが違います");
 			request.setAttribute("loginBean", loginBean);
 		}
+
 		// forwaed_jsp に設定されているJSPへディスパッチ
 		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
 		rDispatcher.forward(request, response);
