@@ -31,7 +31,6 @@
 		</c:otherwise>
 	</c:choose>
 
-
 	<table>
 		<c:forEach var="item" items="${cart}">
 
