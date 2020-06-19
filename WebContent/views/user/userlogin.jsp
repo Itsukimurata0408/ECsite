@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 
-<title>ログイン画面</title>
+<title>ユーザログイン画面</title>
 </head>
 <body>
 
