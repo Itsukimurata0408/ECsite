@@ -17,7 +17,7 @@
 	</header>
 
 	<main>
-		<h1>login</h1>
+		<h1>管理者ログイン</h1>
 
 		<form action="/ECsite/loginAdminServlet" method="post">
 

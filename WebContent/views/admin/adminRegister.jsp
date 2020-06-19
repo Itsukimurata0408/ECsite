@@ -45,9 +45,6 @@ register
 		</p>
 
 
-
-
-
 		<p>
 		<input type="button" onclick="location.href='/MemberInformation/page/menu.html'" value="戻る" >
 		<input type="submit" value="登録">
