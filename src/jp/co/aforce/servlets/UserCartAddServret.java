@@ -15,6 +15,7 @@ import jp.co.aforce.beans.ProductBean;
 
 public class UserCartAddServret {
 
+	//未チェックまたは安全でない操作に対する警告uncheckedを指定
 	@SuppressWarnings("unchecked")
 	public String execute(
 			HttpServletRequest request, HttpServletRequest response)

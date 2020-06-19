@@ -21,7 +21,8 @@ public class UserLoginServlet extends HttpServlet {
 			throws IOException, ServletException {
 
 		// GETリクエストはあり得ないので、無条件でログイン画面に飛ばす
-		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/login.jsp");
+		//TODO ユーザのログインのファイル名を変更
+		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userlogin.jsp");
 		rDispatcher.forward(request, response);
 	}
 
@@ -43,13 +44,13 @@ public class UserLoginServlet extends HttpServlet {
 
 		// モデルをインスタンス化する
 		LoginModel loginModel = new LoginModel();
-		String forward_jsp = "/views/login.jsp";
+		String forward_jsp = "/views/user/userlogin.jsp";
 
 		// 入力された情報がDBに存在するか調べる
 		if (loginModel.loginCheck(username, password)) {
 
-			// ログインに成功した先の JSP を指定
-			forward_jsp = "/views/success.jsp";
+			// TODO ログインに成功した先の JSP を指定
+			forward_jsp = "/views/user/userMain.jsp";
 
 			// ログインが失敗したときの処理
 		} else {
