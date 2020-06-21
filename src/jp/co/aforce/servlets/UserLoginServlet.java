@@ -14,14 +14,15 @@ import jp.co.aforce.models.LoginModel;
 // 親クラスに HttpServlet を指定する
 //これがないと waring がでる
 @SuppressWarnings("serial")
-public class LoginServlet extends HttpServlet {
+public class UserLoginServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
 		// GETリクエストはあり得ないので、無条件でログイン画面に飛ばす
-		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/login.jsp");
+		//TODO ユーザのログインのファイル名を変更
+		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userlogin.jsp");
 		rDispatcher.forward(request, response);
 	}
 
@@ -43,13 +44,13 @@ public class LoginServlet extends HttpServlet {
 
 		// モデルをインスタンス化する
 		LoginModel loginModel = new LoginModel();
-		String forward_jsp = "/views/login.jsp";
+		String forward_jsp = "/views/user/userlogin.jsp";
 
 		// 入力された情報がDBに存在するか調べる
 		if (loginModel.loginCheck(username, password)) {
 
-			// ログインに成功した先の JSP を指定
-			forward_jsp = "/views/success.jsp";
+			// TODO ログインに成功した先の JSP を指定
+			forward_jsp = "/views/user/userMain.jsp";
 
 			// ログインが失敗したときの処理
 		} else {
@@ -57,6 +58,7 @@ public class LoginServlet extends HttpServlet {
 			loginBean.setEmsg("ユーザ名またはパスワードが違います");
 			request.setAttribute("loginBean", loginBean);
 		}
+
 		// forwaed_jsp に設定されているJSPへディスパッチ
 		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
 		rDispatcher.forward(request, response);
