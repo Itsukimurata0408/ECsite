@@ -21,7 +21,6 @@ public class UserLoginServlet extends HttpServlet {
 			throws IOException, ServletException {
 
 		// GETリクエストはあり得ないので、無条件でログイン画面に飛ばす
-		//TODO ユーザのログインのファイル名を変更
 		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userlogin.jsp");
 		rDispatcher.forward(request, response);
 	}
@@ -54,7 +53,7 @@ public class UserLoginServlet extends HttpServlet {
 
 			// ログインが失敗したときの処理
 		} else {
-			// エラーメッセージを設定(newMemberBeanを使用してEmsg表示)
+			// エラーメッセージを設定(Beanを使用してEmsg表示)
 			loginBean.setEmsg("ユーザ名またはパスワードが違います");
 			request.setAttribute("loginBean", loginBean);
 		}

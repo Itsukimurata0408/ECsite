@@ -32,7 +32,7 @@
 
 
 			<p>
-				<button class="loginbotton" type="submit" class="button">ログイン</button>
+				<button class="loginbotton" type="submit">ログイン</button>
 		</div>
 	</form>
 </body>

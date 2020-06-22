@@ -1,25 +1,36 @@
+/*
+ * ユーザがログアウトボタンが押された場合の処理
+ */
+
 package jp.co.aforce.servlets;
 
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import jp.co.aforce.tool.Action;
+public class UserLogoutServlet extends HttpServlet {
 
-public class UserLogoutServlet extends Action {
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	public String execute(
-			HttpServletRequest request, HttpServletResponse response) throws Exception {
 
+		//セッションの取得
 		HttpSession session = request.getSession();
-
-		//ログインしているときにログアウトが押された場合
 		if (session.getAttribute("loginBean") != null) {
 			session.removeAttribute("loginBean");
-			return "userMain.jsp";
 		}
-		//TODO ログインしていない場合にログアウトが押された場合
-		return "userlogouterror.jsp";
+
+		RequestDispatcher rs = request.getRequestDispatcher("/views/user/userlogin.jsp");
+		rs.forward(request, response);
 	}
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		doPost(request, response);
+	}
 }

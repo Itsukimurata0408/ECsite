@@ -30,10 +30,10 @@
         <a href="ゲスト側のカートサーブレット名?submit=cart">カート</a>
 
         if(){
-        <a href="ゲスト側のログインサーブレット名?submit=login">ログイン</a>
+        <a href="UserLoginServlet?submit=login">ログイン</a>
 
         }else{
 
-        <a href="ゲスト側のログインサーブレット名?submit=logout">ログアウト</a>
+        <a href="UserLogoutServlet?submit=logout">ログアウト</a>
     </p>
 </header>
