@@ -27,7 +27,7 @@ version="2.4">
 
  <servlet>
    <servlet-name>loginAdminServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.LoginAdminServlet</servlet-class>
+    <servlet-class>jp.co.aforce.servlets.LoginAdminServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>loginAdminServlet</servlet-name>
@@ -37,7 +37,7 @@ version="2.4">
 
      <servlet>
     <servlet-name>registerAdminServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.RegisterAdminServlet</servlet-class>
+    <servlet-class>jp.co.aforce.servlets.RegisterAdminServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>registerAdminServlet</servlet-name>
@@ -46,7 +46,7 @@ version="2.4">
 
        <servlet>
     <servlet-name>selectProbuctServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.SelectProbuctServlet</servlet-class>
+    <servlet-class>jp.co.aforce.servlets.SelectProbuctServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>selectProbuctServlet</servlet-name>

@@ -33,7 +33,7 @@ $(function() {
 	</p>
 <section id="name">
 <form action="/ECsite/selectProbuctServlet" method="get">
-<p>商品名<input type="text" name="select" ></p>
+<p>商品名<input type="text" name="name" ></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>
@@ -61,14 +61,14 @@ $(function() {
 
 <section id="price">
 <form action="/ECsite/selectProbuctServlet" method="get">
-<p>値段<input type="number" name="select" ></p>
+<p>値段<input type="number" name="price" ></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>
 
 <section id="detail">
 <form action="/ECsite/selectProbuctServlet" method="get">
-<p>詳細<input type="text" name="select" ></p>
+<p>詳細<input type="text" name="detail" ></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>
