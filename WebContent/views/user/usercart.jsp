@@ -3,13 +3,15 @@
 <%--<c:choose>を使用するためにjstlを利用宣言--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<jsp:useBean id="loginBean" scope="session"
+	class="jp.co.aforce.beans.ItemBean" />
 
 <%--ユーザがカートに商品を入れた際のページを表示--%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>カート内</title>
 </head>
 <body>
 
@@ -35,19 +37,26 @@
 		<c:forEach var="item" items="${cart}">
 
 			<tr>
-				<td><img src="img/${itemBean.product.id}.jpg" width=110
+				<td><img src="img/${ItemBean.product.id}.jpg" width=110
 					height=82></td>
-				<td>商品番号${itemBean.product.id}</td>
-				<td>商品名${itemBean.product.name}</td>
-				<td>金額${itemBean.product.price}円</td>
-				<td>個数${itemBean.count}</td>
-				<td><a href="UserCartRemoveServret?id=${itemBean.product.id}">カートから削除</a></td>
+				<td>商品番号${ItemBean.product.id}</td>
+				<td>商品名${ItemBean.product.name}</td>
+				<td>金額${ItemBean.product.price}円</td>
+				<td>個数${ItemBean.count}</td>
+				<td><a href="UserCartRemoveServret?id=${ItemBean.product.id}">カートから削除</a></td>
 
-			</tr>
-			<%-- 合計金額を表示--%>
-			<td>小計</td>
-			<td>合計</td>
-			<tr>
+
+				<%
+					int sum;
+
+				%>
+
+				<%-- 合計金額を表示--%>
+
+				<td>小計</td>
+				<td>合計</td>
+
+
 			</tr>
 		</c:forEach>
 	</table>
