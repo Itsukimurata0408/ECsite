@@ -17,21 +17,21 @@
 
 			<h1>管理者メニュー画面</h1>
 
-		<form>
 
 			<p class="regist">
 				<input type="button" value="商品情報登録" onclick="location.href=''">
 			</p>
 
 			<p class="delete">
-				<input type="button" value="商品情報削除" onclick="location.href=''">
-			</p>
+			<form action="/ECsite/ListProductServlet" method="post">
+        		<button type="submit" name="List" value="delete">商品情報削除</button>
+    		</form>
 
 			<p class="update">
 				<input type="button" value="商品情報変更" onclick="location.href=''">
 			</p>
 
-		</form>
+
 	</main>
 
 </body>

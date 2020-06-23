@@ -7,6 +7,8 @@ public class ListProductsBean {
 	private int price;
 	private String detail;
 
+	public ListProductsBean() {};
+
 	public String getName() {
 		return name;
 	}
@@ -45,5 +47,7 @@ public class ListProductsBean {
 		this.price = price;
 		this.detail = detail;
 	}
+
+
 
 }
