@@ -8,6 +8,11 @@ import jp.co.aforce.beans.SelectProductBean;
 import jp.co.aforce.util.DBUtil;
 
 public class SelectProductModel {
+
+	public boolean cartCheck(String product, String id, String count) {
+		return true;
+	}
+
 	public static List<SelectProductBean> selectCheck(String type,String select) {
 		//実行結果を格納する変数
 		SelectProductBean spBean = new SelectProductBean();
@@ -39,4 +44,6 @@ public class SelectProductModel {
 		}
 		return sp;
 	}
+
+
 }
