@@ -8,7 +8,12 @@ import jp.co.aforce.beans.SelectProductBean;
 import jp.co.aforce.util.DBUtil;
 
 public class SelectProductModel {
-	public static List<SelectProductBean> selectCheck(String type,String select) {
+
+	public boolean cartCheck(String product, String id, String count) {
+		return true;
+	}
+
+	public static List<SelectProductBean> selectCheck(String type, String select) {
 		//実行結果を格納する変数
 		SelectProductBean spBean = new SelectProductBean();
 		List<SelectProductBean> sp = new ArrayList<SelectProductBean>();
@@ -20,7 +25,7 @@ public class SelectProductModel {
 			DBUtil.makeStatement();
 
 			//SQLを実行
-			String SQL = "SELECT * FROM `product` WHERE "+type+" LIKE '%"+select+"%'";
+			String SQL = "SELECT * FROM `product` WHERE " + type + " LIKE '%" + select + "%'";
 			rs = DBUtil.execute(SQL);
 			while (rs.next()) {
 				System.out.println("while");
@@ -29,14 +34,13 @@ public class SelectProductModel {
 				sp.add(spBean);
 			}
 
-
-
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 
-		}finally {
+		} finally {
 			DBUtil.closeConnection();
 		}
 		return sp;
 	}
+
 }
