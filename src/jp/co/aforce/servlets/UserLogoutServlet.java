@@ -27,20 +27,16 @@ public class UserLogoutServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String forward_jsp;
+
 		//セッションの取得
 		HttpSession session = request.getSession();
 		//取得したセッションloginBeanがnullでない場合
 		if (session.getAttribute("loginBean") != null) {
 			//loginBeanのセッションを削除する
 			session.removeAttribute("loginBean");
-			//userMain.jspに遷移する
-			 forward_jsp = "/views/user/userlogout.jsp";
-		} else {
-			forward_jsp = "/views/user/userloginerror.jsp";
 		}
 
-		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
+		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userMain.jsp");
 		rDispatcher.forward(request, response);
 	}
 

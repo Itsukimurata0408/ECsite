@@ -45,12 +45,11 @@ public class UserLoginServlet extends HttpServlet {
 		LoginModel loginModel = new LoginModel();
 		String forward_jsp = "/views/user/userlogin.jsp";
 
-
 		// 入力された情報がDBに存在するか調べる
 		if (loginModel.loginCheck(username, password)) {
 
-			//usernameをnameセッションにを格納
-			request.setAttribute("name", username );
+			//usernameをnameセッションに格納
+			request.setAttribute("name", username);
 
 			// ログインに成功した先の JSP を指定
 			forward_jsp = "/views/user/userMain.jsp";
