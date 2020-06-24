@@ -28,7 +28,7 @@ public class ProductDetailServlet extends HttpServlet{
 		request.setAttribute("product", list);
 
 
-			RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/admin/ProductDetail.jsp");
+			RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/admin/productDetail.jsp");
 			rDispatcher.forward(request, response);
 
 		}

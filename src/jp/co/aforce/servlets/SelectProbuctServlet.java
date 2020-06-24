@@ -51,11 +51,20 @@ public class SelectProbuctServlet  extends HttpServlet{
 
 		List<SelectProductBean> list = SelectProductModel.selectCheck(type,select);
 
-		request.setAttribute("select", list);
+		if(list == null) {
+			request.setAttribute("nf", "見つかりませんでした。");
 
 
-			RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/admin/changeProduct.jsp");
-			rDispatcher.forward(request, response);
+
+		}else {
+			request.setAttribute("select", list);
+
+
+
+		}
+		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/admin/changeProduct.jsp");
+		rDispatcher.forward(request, response);
+
 
 		}
 }
