@@ -17,14 +17,13 @@ public class SelectProductModel {
 
 
 
-
 		try {
 			//DB接続するための手続
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
 			if("price".equals(type)) {
-
 				//SQLを実行
+
 				SQL = "SELECT * FROM `product` WHERE price <= "+select;
 
 			}else {
@@ -42,15 +41,18 @@ public class SelectProductModel {
 				spBean.setName(rs.getString("name"));
 				sp.add(spBean);
 
-			}
 
+			}
 			return sp;
+
 
 		}catch(Exception e) {
 			e.printStackTrace();
+			//				sp.add(null);
 			return null;
 		}finally {
 			DBUtil.closeConnection();
+
 		}
 	}
 }

@@ -28,8 +28,10 @@ public class ProductDetailServlet extends HttpServlet{
 			forward_jsp = "/views/admin/productDetail.jsp";
 		}
 
-			RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
-			rDispatcher.forward(request, response);
 
-		}
+		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
+
+		rDispatcher.forward(request, response);
+
+	}
 }

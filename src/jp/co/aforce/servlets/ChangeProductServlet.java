@@ -37,17 +37,15 @@ public class ChangeProductServlet extends HttpServlet{
 					id = parameter[i];
 
 					break;
+
 				case 1:
 					name = parameter[i];
 
-					break;
 				case 2:
 					category = parameter[i];
-
 					break;
 				case 3:
 					price = parameter[i];
-
 					break;
 				case 4:
 					detail = parameter[i];
@@ -56,6 +54,7 @@ public class ChangeProductServlet extends HttpServlet{
 				status = false;
 				break;
 			}
+
 		}
 
 		if(status == true) {
@@ -86,6 +85,8 @@ public class ChangeProductServlet extends HttpServlet{
 
 		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
 		rDispatcher.forward(request, response);
+
+
 
 	}
 }

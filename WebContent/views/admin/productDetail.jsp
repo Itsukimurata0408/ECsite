@@ -13,6 +13,7 @@
 
 <p>${Emsg }</p>
 
+
 <form action="/ECsite/changeProductServlet" method="get">
 <c:forEach var="pr" items="${product}">
 
@@ -62,6 +63,7 @@
 
 </c:forEach>
 </form>
+
 
 </body>
 </html>
