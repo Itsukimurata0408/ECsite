@@ -11,9 +11,12 @@
 </head>
 <body>
 
-<c:forEach var="pr" items="${product}">
+<p>${Emsg }</p>
 
 <form action="/ECsite/changeProductServlet" method="get">
+<c:forEach var="pr" items="${product}">
+
+
 		<p>
 			ID <input type="text" name="id" value="${pr.id }" readonly>
 		</p>
@@ -50,15 +53,15 @@
 			詳細説明文 <textarea name="detail" rows="10" cols="60">${pr.detail }</textarea>
 		</p>
 
-
 		<p>
-		<input type="button" onclick="location.href='/MemberInformation/page/menu.html'" value="戻る" >
+
 		<input type="submit" value="登録">
 		</p>
 
-	</form>
+
 
 </c:forEach>
+</form>
 
 </body>
 </html>

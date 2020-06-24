@@ -12,7 +12,7 @@
 </head>
 <body>
 
-
+<p>${nf } </p>
 
 
 <c:forEach var="sp" items="${select}">
