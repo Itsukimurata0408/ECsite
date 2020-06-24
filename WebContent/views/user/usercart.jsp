@@ -3,7 +3,7 @@
 <%--<c:choose>を使用するためにjstlを利用宣言--%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<jsp:useBean id="loginBean" scope="session"
+<jsp:useBean id="ItemBean" scope="session"
 	class="jp.co.aforce.beans.ItemBean" />
 
 <%--ユーザがカートに商品を入れた際のページを表示--%>

@@ -16,8 +16,6 @@ import jp.co.aforce.models.LoginModel;
 @SuppressWarnings("serial")
 public class UserLoginServlet extends HttpServlet {
 
-
-
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
@@ -47,10 +45,14 @@ public class UserLoginServlet extends HttpServlet {
 		LoginModel loginModel = new LoginModel();
 		String forward_jsp = "/views/user/userlogin.jsp";
 
+
 		// 入力された情報がDBに存在するか調べる
 		if (loginModel.loginCheck(username, password)) {
 
-			// TODO ログインに成功した先の JSP を指定
+			//usernameをnameセッションにを格納
+			request.setAttribute("name", username );
+
+			// ログインに成功した先の JSP を指定
 			forward_jsp = "/views/user/userMain.jsp";
 
 			// ログインが失敗したときの処理
