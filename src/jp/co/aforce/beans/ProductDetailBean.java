@@ -1,6 +1,6 @@
 package jp.co.aforce.beans;
 
-public class SelectProductBean {
+public class ProductDetailBean {
 	private String id ;
 	private String name ;
 	private String image;
@@ -57,7 +57,5 @@ public class SelectProductBean {
 	public void setDetail(String detail) {
 		this.detail = detail;
 	}
-
-
 
 }
