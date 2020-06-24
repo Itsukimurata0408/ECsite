@@ -17,19 +17,21 @@ public class ProductDetailServlet extends HttpServlet{
 			throws IOException, ServletException{
 
 		String parameter = request.getParameter("id");
+		String forward_jsp = null;
 
+		if(parameter.isEmpty()) {
+			forward_jsp = "/views/admin/changeProduct.jsp";
 
-
-
-		System.out.println(parameter);
-
-		List<ProductDetailBean> list = ProductModel.productCheck(parameter);
-
-		request.setAttribute("product", list);
-
-
-			RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/admin/ProductDetail.jsp");
-			rDispatcher.forward(request, response);
-
+		}else {
+			List<ProductDetailBean> list = ProductModel.productCheck(parameter);
+			request.setAttribute("product", list);
+			forward_jsp = "/views/admin/productDetail.jsp";
 		}
+
+
+		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
+
+		rDispatcher.forward(request, response);
+
+	}
 }

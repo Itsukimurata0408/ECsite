@@ -10,7 +10,6 @@ import jp.co.aforce.util.DBUtil;
 public class ProductModel {
 	public static List<ProductDetailBean> productCheck(String id) {
 		//実行結果を格納する変数
-		//		SelectProductBean spBean = new SelectProductBean();
 		List<ProductDetailBean> sp = new ArrayList<ProductDetailBean>();
 		ResultSet rs = null;
 

@@ -14,7 +14,7 @@ import jp.co.aforce.models.SelectProductModel;
 
 
 
-public class SelectProbuctServlet  extends HttpServlet{
+public class SelectProductServlet  extends HttpServlet{
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException{
@@ -47,11 +47,11 @@ public class SelectProbuctServlet  extends HttpServlet{
 			}
 		}
 
-		System.out.println("type="+type+"//select="+select);
+
 
 		List<SelectProductBean> list = SelectProductModel.selectCheck(type,select);
 
-		if(list == null) {
+		if(list == null || list.size() == 0) {
 			request.setAttribute("nf", "見つかりませんでした。");
 
 
