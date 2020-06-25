@@ -24,10 +24,8 @@ public class UserLogoutServlet extends HttpServlet {
 		rDispatcher.forward(request, response);
 	}
 
-
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 
 		//セッションの取得
 		HttpSession session = request.getSession();
@@ -40,7 +38,7 @@ public class UserLogoutServlet extends HttpServlet {
 		}
 
 		// forwaed_jsp に設定されているJSPへディスパッチ
-				RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
-				rDispatcher.forward(request, response);
+		RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
+		rDispatcher.forward(request, response);
 	}
 }

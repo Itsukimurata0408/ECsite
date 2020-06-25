@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <link href="css/shopping.css" rel="stylesheet" type="text/css" />
 <%-- header --%>
 <header>
@@ -14,5 +14,4 @@
 			href="UserLoginServlet?submit=login">ログイン</a> <a
 			href="UserLogoutServlet?submit=logout">ログアウト</a>
 	</p>
-
 </header>
