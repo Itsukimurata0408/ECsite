@@ -45,10 +45,10 @@ public class UserShoppingServlet extends HttpServlet {
 
 		// 商品情報を取得
 		SelectProductModel spm = new SelectProductModel();
-
 		String forward_jsp = null;
 
-		if (spm.cartCheck(product, id, count)) {
+
+		if (product != null && id != null && count != null) {
 			//購入成功した場合
 			forward_jsp = "/views/user/userResult.jsp";
 
@@ -58,7 +58,7 @@ public class UserShoppingServlet extends HttpServlet {
 		}
 
 		// 購入確認画面に移動
-		RequestDispatcher rd = request.getRequestDispatcher("/views/user/userResultErrer.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher(forward_jsp);
 		rd.forward(request, response);
 	}
 

@@ -50,7 +50,6 @@ public class SelectProbuctServlet  extends HttpServlet{
 		System.out.println("type="+type+"//select="+select);
 
 		List<SelectProductBean> list = SelectProductModel.selectCheck(type,select);
-
 		request.setAttribute("select", list);
 
 
