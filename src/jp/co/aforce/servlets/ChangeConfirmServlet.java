@@ -11,9 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import jp.co.aforce.beans.SelectProductBean;
-import jp.co.aforce.models.ChangeProductModel;
 
-public class ChangeProductServlet extends HttpServlet {
+public class ChangeConfirmServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 
@@ -32,15 +31,13 @@ public class ChangeProductServlet extends HttpServlet {
 		boolean status = true;
 
 		for (int i = 0; i < parameter.length; i++) {
-			if (!parameter[i].equals("")) {
+			if (!parameter[i].isEmpty()) {
 				switch (i) {
 				case 0:
 					id = parameter[i];
-
 					break;
 				case 1:
 					name = parameter[i];
-
 					break;
 				case 2:
 					category = parameter[i];
@@ -58,27 +55,38 @@ public class ChangeProductServlet extends HttpServlet {
 
 		}
 
+		List<SelectProductBean> list = new ArrayList<SelectProductBean>();
+		SelectProductBean spBean = new SelectProductBean();
+
 		if (status == true) {
-			List<SelectProductBean> list = ChangeProductModel.changeCheck(id, name, image, category, price, detail);
 
-			request.setAttribute("update", list);
+			if (!image.isEmpty()) {
+				spBean.setImage(image);
+			} else {
+				spBean.setImage("変更なし");
+			}
 
-			forward_jsp = "/views/admin/changeSuccess.jsp";
-
-		} else {
-			List<SelectProductBean> list = new ArrayList<SelectProductBean>();
-			SelectProductBean spBean = new SelectProductBean();
-
-			spBean.setId(request.getParameter("id"));
-			spBean.setName(request.getParameter("name"));
-			spBean.setCategory(request.getParameter("category"));
-			spBean.setPrice(request.getParameter("price"));
-			spBean.setDetail(request.getParameter("detail"));
+			spBean.setId(id);
+			spBean.setName(name);
+			spBean.setCategory(category);
+			spBean.setPrice(price);
+			spBean.setDetail(detail);
 			list.add(spBean);
 
 			request.setAttribute("product", list);
+			forward_jsp = "/views/admin/changeConfirm.jsp";
+		} else {
+
 			request.setAttribute("Emsg", "入力されていない項目があります");
 
+			spBean.setId(id);
+			spBean.setName(name);
+			spBean.setCategory(category);
+			spBean.setPrice(price);
+			spBean.setDetail(detail);
+			list.add(spBean);
+
+			request.setAttribute("product", list);
 			forward_jsp = "/views/admin/productDetail.jsp";
 		}
 
@@ -86,4 +94,5 @@ public class ChangeProductServlet extends HttpServlet {
 		rDispatcher.forward(request, response);
 
 	}
+
 }
