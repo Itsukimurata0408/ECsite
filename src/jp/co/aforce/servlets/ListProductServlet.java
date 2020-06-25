@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.aforce.beans.ListProductsBean;
+import jp.co.aforce.beans.ListProductBean;
 import jp.co.aforce.models.ListProductModel;
 
 @SuppressWarnings("serial")
@@ -35,8 +35,8 @@ public class ListProductServlet extends HttpServlet {
 		//パラメタ取得
 		String list = request.getParameter("List");
 
-		List<ListProductsBean> productList = new ArrayList<ListProductsBean>();
-		ListProductsBean listProductsBean = new ListProductsBean();
+		List<ListProductBean> productList = new ArrayList<ListProductBean>();
+		ListProductBean listProductsBean = new ListProductBean();
 		ListProductModel listProductModel = new ListProductModel();
 
 		String forward_jsp = null;

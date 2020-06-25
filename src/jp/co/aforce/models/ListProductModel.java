@@ -4,18 +4,18 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.aforce.beans.ListProductsBean;
+import jp.co.aforce.beans.ListProductBean;
 import jp.co.aforce.util.DBUtil;
 
 public class ListProductModel {
 	@SuppressWarnings("unused")
 
-  public List<ListProductsBean> listProduct(ListProductsBean bean) {
+  public List<ListProductBean> listProduct(ListProductBean bean) {
       // 実行結果を格納する変数
 		ResultSet rs = null;
 
   	  //一覧処理
-		List<ListProductsBean> productList = new ArrayList<ListProductsBean>();
+		List<ListProductBean> productList = new ArrayList<ListProductBean>();
 
 		try {
 
@@ -27,7 +27,7 @@ public class ListProductModel {
 
 			rs.beforeFirst();
 			while (rs.next()) {
-				ListProductsBean listProductBean = new ListProductsBean();
+				ListProductBean listProductBean = new ListProductBean();
 
 				listProductBean.setId(rs.getString("id"));
 				listProductBean.setName(rs.getString("name"));

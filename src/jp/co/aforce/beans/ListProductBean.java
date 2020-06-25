@@ -1,6 +1,6 @@
 package jp.co.aforce.beans;
 
-public class ListProductsBean {
+public class ListProductBean {
 	private String id ;
 	private String name;
 	private String image;
@@ -8,7 +8,7 @@ public class ListProductsBean {
 	private int price;
 	private String detail;
 
-	public ListProductsBean() {};
+	public ListProductBean() {};
 
 	public String getId() {
 		return id;
@@ -47,7 +47,7 @@ public class ListProductsBean {
 		this.detail = detail;
 	}
 
-	public ListProductsBean(String name,String image,String category,int price,String detail) {
+	public ListProductBean(String name,String image,String category,int price,String detail) {
 		this.name = name;
 		this.image = image;
 		this.category = category;
