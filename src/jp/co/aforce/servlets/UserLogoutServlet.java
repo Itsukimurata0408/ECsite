@@ -15,22 +15,33 @@ import javax.servlet.http.HttpSession;
 
 public class UserLogoutServlet extends HttpServlet {
 
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+
+		// GETリクエストはあり得ないので、無条件でログイン画面に飛ばす
+		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userMain.jsp");
+		rDispatcher.forward(request, response);
+	}
+
+	String forward_jsp;
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 
 		//セッションの取得
 		HttpSession session = request.getSession();
+
+
+		//ログインしているときにログアウトが押された場合
 		if (session.getAttribute("loginBean") != null) {
 			session.removeAttribute("loginBean");
+			forward_jsp = "userMain.jsp";
 		}
 
-		RequestDispatcher rs = request.getRequestDispatcher("/views/user/userlogin.jsp");
-		rs.forward(request, response);
-	}
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
-		doPost(request, response);
+		// forwaed_jsp に設定されているJSPへディスパッチ
+				RequestDispatcher rDispatcher = request.getRequestDispatcher(forward_jsp);
+				rDispatcher.forward(request, response);
 	}
 }
