@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,22 +10,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-register
 
-<p>${Emsg}</p>
-	<p>${Smsg}</p>
-	<form action="/ECsite/registerAdminServlet" method="post">
+<p>${Emsg }</p>
+
+
+<form action="/ECsite/changeProductServlet" method="get">
+<c:forEach var="pr" items="${product}">
+
+
 		<p>
-			品名 <input type="text" name="name">
+			ID <input type="text" name="id" value="${pr.id }" readonly>
 		</p>
 
 		<p>
-			画像 <input type="file" name="image">
+			品名 <input type="text" name="name" value="${pr.name }">
 		</p>
 
 		<p>
-			カテゴリ <select name="category">
-			 	<option value=""></option>
+			画像 <input type="file" name="image" >
+		</p>
+
+		<p>
+			カテゴリ <select name="category" >
+			 	<option value="${pr.category }">${pr.category }</option>
 				<option value="肉・卵・乳製品">肉・卵・乳製品</option>
 				<option value="水産加工品">水産加工品</option>
 				<option value="麺類">麺類</option>
@@ -37,19 +47,23 @@ register
 		</p>
 
 		<p>
-			値段 <input type="text" name="price">
+			値段 <input type="text" name="price" value="${pr.price }">
 		</p>
 
 		<p>
-			詳細説明文 <textarea name="detail" rows="10" cols="60"></textarea>
+			詳細説明文 <textarea name="detail" rows="10" cols="60">${pr.detail }</textarea>
 		</p>
-
 
 		<p>
 
 		<input type="submit" value="登録">
 		</p>
 
-	</form>
+
+
+</c:forEach>
+</form>
+
+
 </body>
 </html>

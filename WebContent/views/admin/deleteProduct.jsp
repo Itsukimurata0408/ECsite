@@ -13,6 +13,7 @@
 <body>
 <table>
   <tr>
+    <th>商品ID</th>
     <th>商品名</th>
     <th>画像</th>
     <th>カテゴリー</th>
@@ -21,11 +22,14 @@
   </tr>
 <c:forEach var="products" items="${productList}">
   <tr>
+
+    <td><c:out value="${products.id}"/></td>
     <td><c:out value="${products.name}"/></td>
     <td><c:out value="${products.image}"/></td>
     <td><c:out value="${products.category}"/></td>
     <td><c:out value="${products.price}"/></td>
     <td><c:out value="${products.detail}"/></td>
+
   </tr>
 </c:forEach>
 

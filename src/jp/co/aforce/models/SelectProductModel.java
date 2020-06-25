@@ -10,33 +10,49 @@ import jp.co.aforce.util.DBUtil;
 public class SelectProductModel {
 	public static List<SelectProductBean> selectCheck(String type,String select) {
 		//実行結果を格納する変数
-		SelectProductBean spBean = new SelectProductBean();
+
 		List<SelectProductBean> sp = new ArrayList<SelectProductBean>();
+		String SQL = null;
 		ResultSet rs = null;
+
+
 
 		try {
 			//DB接続するための手続
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
+			if("price".equals(type)) {
+				//SQLを実行
 
-			//SQLを実行
-			String SQL = "SELECT * FROM `product` WHERE "+type+" LIKE '%"+select+"%'";
+				SQL = "SELECT * FROM `product` WHERE price <= "+select;
+
+			}else {
+
+				//SQLを実行
+				SQL = "SELECT * FROM `product` WHERE "+type+" LIKE '%"+select+"%'";
+
+			}
 			rs = DBUtil.execute(SQL);
+			rs.beforeFirst();
 			while (rs.next()) {
-				System.out.println("while");
+
+				SelectProductBean spBean = new SelectProductBean();
 				spBean.setId(rs.getString("product_id"));
 				spBean.setName(rs.getString("name"));
 				sp.add(spBean);
-			}
 
+
+			}
+			return sp;
 
 
 		}catch(Exception e) {
 			e.printStackTrace();
-
+			//				sp.add(null);
+			return null;
 		}finally {
 			DBUtil.closeConnection();
+
 		}
-		return sp;
 	}
 }

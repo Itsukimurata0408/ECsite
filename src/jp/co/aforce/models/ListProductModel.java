@@ -10,7 +10,7 @@ import jp.co.aforce.util.DBUtil;
 public class ListProductModel {
 	@SuppressWarnings("unused")
 
-  public List<ListProductsBean> ListProduct(ListProductsBean bean) {
+  public List<ListProductsBean> listProduct(ListProductsBean bean) {
       // 実行結果を格納する変数
 		ResultSet rs = null;
 
@@ -29,6 +29,7 @@ public class ListProductModel {
 			while (rs.next()) {
 				ListProductsBean listProductBean = new ListProductsBean();
 
+				listProductBean.setId(rs.getString("id"));
 				listProductBean.setName(rs.getString("name"));
 				listProductBean.setImage(rs.getString("image"));
 				listProductBean.setCategory(rs.getString("category"));
@@ -36,6 +37,7 @@ public class ListProductModel {
 				listProductBean.setDetail(rs.getString("detail"));
 				productList.add(listProductBean);
 			}
+
 			rs.close();
 
 		} catch (Exception e) {

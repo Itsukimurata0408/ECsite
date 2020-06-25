@@ -32,17 +32,17 @@ $(function() {
 			</select>
 	</p>
 <section id="name">
-<form action="/ECsite/selectProbuctServlet" method="get">
-<p>商品名<input type="text" name="select" ></p>
+<form action="/ECsite/selectProductServlet" method="get">
+<p>商品名<input type="text" name="name" ></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>
 
 <section id="category">
-<form action="/ECsite/selectProbuctServlet" method="get">
+<form action="/ECsite/selectProductServlet" method="get">
 <p>
 			カテゴリ <select name="category">
-			<option value="${sp.category }">${sp.category }</option>
+			<option value=""></option>
 			<option value="肉・卵・乳製品">肉・卵・乳製品</option>
 			<option value="水産加工品">水産加工品</option>
 			<option value="麺類">麺類</option>
@@ -60,15 +60,15 @@ $(function() {
 </section>
 
 <section id="price">
-<form action="/ECsite/selectProbuctServlet" method="get">
-<p>値段<input type="number" name="select" ></p>
+<form action="/ECsite/selectProductServlet" method="get">
+<p>値段<input type="number" name="price" ></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>
 
 <section id="detail">
-<form action="/ECsite/selectProbuctServlet" method="get">
-<p>詳細<input type="text" name="select" ></p>
+<form action="/ECsite/selectProductServlet" method="get">
+<p>詳細<textarea name="detail" rows="10" cols="60"></textarea></p>
 <input type="submit" value="検索" class="button">
 </form>
 </section>

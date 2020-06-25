@@ -24,7 +24,7 @@
 
 	<servlet>
 		<servlet-name>loginAdminServlet</servlet-name>
-		<servlet-class>jp.co.aforce.servlet.LoginAdminServlet</servlet-class>
+		<servlet-class>jp.co.aforce.servlets.LoginAdminServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>loginAdminServlet</servlet-name>
@@ -34,7 +34,7 @@
 
 	<servlet>
 		<servlet-name>registerAdminServlet</servlet-name>
-		<servlet-class>jp.co.aforce.servlet.RegisterAdminServlet</servlet-class>
+		<servlet-class>jp.co.aforce.servlets.RegisterAdminServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>registerAdminServlet</servlet-name>
@@ -49,11 +49,41 @@
 
        <servlet>
     <servlet-name>selectProbuctServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlet.SelectProbuctServlet</servlet-class>
+    <servlet-class>jp.co.aforce.servlets.SelectProbuctServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>selectProbuctServlet</servlet-name>
     <url-pattern>/selectProbuctServlet</url-pattern>
+  </servlet-mapping>
+
+
+   <servlet>
+    <servlet-name>productDetailServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.ProductDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>productDetailServlet</servlet-name>
+    <url-pattern>/productDetailServlet</url-pattern>
+  </servlet-mapping>
+
+
+   <servlet>
+    <servlet-name>changeProductServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.ChangeProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changeProductServlet</servlet-name>
+    <url-pattern>/changeProductServlet</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ListProductServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListProductServlet</servlet-name>
+    <url-pattern>/ListProductServlet</url-pattern>
   </servlet-mapping>
 
 
