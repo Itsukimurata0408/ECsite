@@ -25,19 +25,19 @@ public class SelectProductBean {
 		this.name = name;
 	}
 
-	public String getImage() {
+	public String getImg() {
 		return image;
 	}
 
-	public void setImage(String image) {
+	public void setImg(String image) {
 		this.image = image;
 	}
 
-	public String getCategory() {
+	public String getCate() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCate(String category) {
 		this.category = category;
 	}
 
@@ -47,7 +47,7 @@ public class SelectProductBean {
 	}
 
 	public void setPrice(String price) {
-		this.price = price;
+		this.name = price;
 	}
 
 	public String getDetail() {
