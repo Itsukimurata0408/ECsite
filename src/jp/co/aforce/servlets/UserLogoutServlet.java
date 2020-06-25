@@ -24,7 +24,6 @@ public class UserLogoutServlet extends HttpServlet {
 		rDispatcher.forward(request, response);
 	}
 
-	String forward_jsp;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -33,7 +32,7 @@ public class UserLogoutServlet extends HttpServlet {
 		//セッションの取得
 		HttpSession session = request.getSession();
 
-
+		String forward_jsp = "/views/user/userMain.jsp";
 		//ログインしているときにログアウトが押された場合
 		if (session.getAttribute("loginBean") != null) {
 			session.removeAttribute("loginBean");

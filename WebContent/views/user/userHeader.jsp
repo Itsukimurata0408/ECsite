@@ -6,10 +6,6 @@
 
 	<jsp:useBean id="loginBean" scope="session"
 		class="jp.co.aforce.beans.LoginBean" />
-	<!-- ログイン済みの場合は名前表示 ログインしていない段階では「ようこそゲストさん」
-    	 beanの情報が必要
-    	 TODO: 書き換え
-    	  -->
 
 	<%--EL方式でログインされた場合にusernameを表示--%>
 	<p>ようこそ「${name}」さん</p>
