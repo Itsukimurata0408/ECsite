@@ -11,7 +11,7 @@ register
 
 <p>${Emsg}</p>
 	<p>${Smsg}</p>
-	<form action="/ECsite/registerAdminServlet" method="post">
+	<form action="/ECsite/registerConfilmServlet" method="post">
 		<p>
 			品名 <input type="text" name="name">
 		</p>
@@ -47,7 +47,7 @@ register
 
 		<p>
 
-		<input type="submit" value="登録">
+		<input type="submit" value="確認">
 		</p>
 
 	</form>

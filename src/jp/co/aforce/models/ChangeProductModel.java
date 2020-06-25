@@ -20,10 +20,9 @@ public class ChangeProductModel {
 			//DB接続するための手続
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
-			if(image.isEmpty()){
+			if(image.equals("変更なし")){
 
 				System.out.println("if");
-
 
 				//SQLを実行
 				SQL = "UPDATE `product` " +
