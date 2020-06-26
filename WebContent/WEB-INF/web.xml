@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
 	<display-name>shopping</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
@@ -9,19 +12,14 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
 	<servlet>
-
 		<servlet-name>UserLoginServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.UserLoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UserLoginServlet</servlet-name>
 		<url-pattern>/UserLoginServlet</url-pattern>
-
-
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>loginAdminServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.LoginAdminServlet</servlet-class>
@@ -29,9 +27,7 @@
 	<servlet-mapping>
 		<servlet-name>loginAdminServlet</servlet-name>
 		<url-pattern>/loginAdminServlet</url-pattern>
-
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>registerAdminServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.RegisterAdminServlet</servlet-class>
@@ -40,51 +36,95 @@
 		<servlet-name>registerAdminServlet</servlet-name>
 		<url-pattern>/registerAdminServlet</url-pattern>
 	</servlet-mapping>
-
-
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>
-
-
-       <servlet>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.SelectProbuctServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <url-pattern>/selectProbuctServlet</url-pattern>
-  </servlet-mapping>
-
-
-   <servlet>
-    <servlet-name>productDetailServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ProductDetailServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>productDetailServlet</servlet-name>
-    <url-pattern>/productDetailServlet</url-pattern>
-  </servlet-mapping>
-
-
-   <servlet>
-    <servlet-name>changeProductServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ChangeProductServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>changeProductServlet</servlet-name>
-    <url-pattern>/changeProductServlet</url-pattern>
-  </servlet-mapping>
-
-
-<servlet>
-    <servlet-name>ListProductServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ListProductServlet</servlet-name>
-    <url-pattern>/ListProductServlet</url-pattern>
-  </servlet-mapping>
-
-
+	<servlet>
+		<servlet-name>selectProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.SelectProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectProductServlet</servlet-name>
+		<url-pattern>/selectProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserShoppingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<url-pattern>/UserShopping</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ResultServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ResultServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResultServlet</servlet-name>
+		<url-pattern>/Result</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/UserLogoutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>productDetailServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ProductDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productDetailServlet</servlet-name>
+		<url-pattern>/productDetailServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>changeProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ChangeProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changeProductServlet</servlet-name>
+		<url-pattern>/changeProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserProductSearchServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserProductSearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserProductSearchServlet</servlet-name>
+		<url-pattern>/UserProductSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registerConfilmServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.RegisterConfilmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerConfilmServlet</servlet-name>
+		<url-pattern>/registerConfilmServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>changeConfilmServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ChangeConfilmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changeConfilmServlet</servlet-name>
+		<url-pattern>/changeConfilmServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListProductServlet</servlet-name>
+		<url-pattern>/ListProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.DeleteProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<url-pattern>/DeleteProductServlet</url-pattern>
+	</servlet-mapping>
 </web-app>
