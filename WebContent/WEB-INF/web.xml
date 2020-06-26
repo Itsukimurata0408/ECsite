@@ -77,5 +77,14 @@
   </servlet-mapping>
 
 
+<servlet>
+    <servlet-name>ListProductServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListProductServlet</servlet-name>
+    <url-pattern>/ListProductServlet</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
