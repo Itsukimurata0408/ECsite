@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../../css/admin/registerConfirm.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminConfirm.css">
 </head>
 <body>
 <form action="/ECsite/changeProductServlet" method="get">
