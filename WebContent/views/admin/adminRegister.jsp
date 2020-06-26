@@ -16,7 +16,9 @@
 <h1>商品情報登録</h1>
 <p>${Emsg}</p>
 	<p>${Smsg}</p>
+
 	<form action="/ECsite/registerConfirmServlet" method="post">
+
 		<p>
 			品名 <input type="text" name="name">
 		</p>

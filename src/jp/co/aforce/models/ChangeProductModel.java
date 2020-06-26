@@ -20,7 +20,9 @@ public class ChangeProductModel {
 			//DB接続するための手続
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
+
 			if("変更なし".equals(image)){
+
 
 				System.out.println("if");
 
