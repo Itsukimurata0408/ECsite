@@ -9,19 +9,14 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
 	<servlet>
-
 		<servlet-name>UserLoginServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.UserLoginServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UserLoginServlet</servlet-name>
 		<url-pattern>/UserLoginServlet</url-pattern>
-
-
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>loginAdminServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.LoginAdminServlet</servlet-class>
@@ -29,9 +24,7 @@
 	<servlet-mapping>
 		<servlet-name>loginAdminServlet</servlet-name>
 		<url-pattern>/loginAdminServlet</url-pattern>
-
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>registerAdminServlet</servlet-name>
 		<servlet-class>jp.co.aforce.servlets.RegisterAdminServlet</servlet-class>
@@ -40,51 +33,87 @@
 		<servlet-name>registerAdminServlet</servlet-name>
 		<url-pattern>/registerAdminServlet</url-pattern>
 	</servlet-mapping>
-
-
 	<session-config>
 		<session-timeout>60</session-timeout>
 	</session-config>
-
-
-       <servlet>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.SelectProbuctServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <url-pattern>/selectProbuctServlet</url-pattern>
-  </servlet-mapping>
-
-
-   <servlet>
-    <servlet-name>productDetailServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ProductDetailServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>productDetailServlet</servlet-name>
-    <url-pattern>/productDetailServlet</url-pattern>
-  </servlet-mapping>
-
-
-   <servlet>
-    <servlet-name>changeProductServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ChangeProductServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>changeProductServlet</servlet-name>
-    <url-pattern>/changeProductServlet</url-pattern>
-  </servlet-mapping>
-
-
-<servlet>
-    <servlet-name>ListProductServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ListProductServlet</servlet-name>
-    <url-pattern>/ListProductServlet</url-pattern>
-  </servlet-mapping>
-
-
+	<servlet>
+		<servlet-name>selectProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.SelectProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectProductServlet</servlet-name>
+		<url-pattern>/selectProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>productDetailServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ProductDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productDetailServlet</servlet-name>
+		<url-pattern>/productDetailServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>changeProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ChangeProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changeProductServlet</servlet-name>
+		<url-pattern>/changeProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>registerConfirmServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.RegisterConfirmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerConfirmServlet</servlet-name>
+		<url-pattern>/registerConfirmServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>changeConfirmServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ChangeConfirmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changeConfirmServlet</servlet-name>
+		<url-pattern>/changeConfirmServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ListProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ListProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListProductServlet</servlet-name>
+		<url-pattern>/ListProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.DeleteProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<url-pattern>/DeleteProductServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserProductSearchServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserProductSearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserProductSearchServlet</servlet-name>
+		<url-pattern>/UserProductSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserShoppingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<url-pattern>/UserShopping</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ResultServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.ResultServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResultServlet</servlet-name>
+		<url-pattern>/Result</url-pattern>
+	</servlet-mapping>
 </web-app>
