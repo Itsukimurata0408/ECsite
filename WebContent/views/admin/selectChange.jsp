@@ -31,6 +31,7 @@ $(function() {
 			<option value="detail">詳細</option>
 			</select>
 	</p>
+
 <section id="name">
 <form action="/ECsite/selectProductServlet" method="get">
 <p>商品名<input type="text" name="name" ></p>
@@ -72,8 +73,6 @@ $(function() {
 <input type="submit" value="検索" class="button">
 </form>
 </section>
-
-
 
 </body>
 

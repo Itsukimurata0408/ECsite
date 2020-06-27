@@ -14,7 +14,9 @@
 <p>${Emsg }</p>
 
 
-<form action="/ECsite/changeProductServlet" method="get">
+
+<form action="/ECsite/changeConfirmServlet" method="get">
+
 <c:forEach var="pr" items="${product}">
 
 
@@ -56,7 +58,7 @@
 
 		<p>
 
-		<input type="submit" value="登録">
+		<input type="submit" value="確認">
 		</p>
 
 
