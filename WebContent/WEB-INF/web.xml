@@ -47,14 +47,14 @@
 	</session-config>
 
 
-       <servlet>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <servlet-class>jp.co.aforce.servlets.SelectProbuctServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>selectProbuctServlet</servlet-name>
-    <url-pattern>/selectProbuctServlet</url-pattern>
-  </servlet-mapping>
+	<servlet>
+		<servlet-name>selectProbuctServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlet.SelectProbuctServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>selectProbuctServlet</servlet-name>
+		<url-pattern>/selectProbuctServlet</url-pattern>
+	</servlet-mapping>
 
 
    <servlet>
@@ -86,5 +86,24 @@
     <url-pattern>/ListProductServlet</url-pattern>
   </servlet-mapping>
 
+
+	<servlet>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserShoppingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserShoppingServlet</servlet-name>
+		<url-pattern>/UserShopping</url-pattern>
+	</servlet-mapping>
+
+
+		<servlet>
+			<servlet-name>ResultServlet</servlet-name>
+			<servlet-class>jp.co.aforce.servlets.ResultServlet</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>ResultServlet</servlet-name>
+			<url-pattern>/Result</url-pattern>
+		</servlet-mapping>
 
 </web-app>
