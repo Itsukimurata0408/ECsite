@@ -76,6 +76,22 @@
     <url-pattern>/changeProductServlet</url-pattern>
   </servlet-mapping>
 
+	<servlet>
+		<servlet-name>registerConfirmServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.RegisterConfirmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerConfirmServlet</servlet-name>
+		<url-pattern>/registerConfirmServlet</url-pattern>
+	</servlet-mapping>
 
+	   <servlet>
+    <servlet-name>changeConfirmServlet</servlet-name>
+    <servlet-class>jp.co.aforce.servlets.ChangeConfirmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changeConfirmServlet</servlet-name>
+    <url-pattern>/changeConfirmServlet</url-pattern>
+  </servlet-mapping>
 
 </web-app>
