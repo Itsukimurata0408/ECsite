@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-購入失敗
+
 </body>
 </html>
