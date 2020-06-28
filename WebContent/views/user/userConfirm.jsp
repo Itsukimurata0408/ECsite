@@ -1,37 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<jsp:useBean id="item_bean" scope="session"
-	class="jp.co.aforce.beans.ItemBean" />
-<jsp:useBean id="product_bean" scope="session"
-	class="jp.co.aforce.beans.ProductBean" />
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<jsp:useBean id="item_bean" scope="session" class="jp.co.aforce.beans.ItemBean"/>
+<jsp:useBean id="product_bean" scope="session" class="jp.co.aforce.beans.ProductBean"/>
 
 <!-- 購入確認画面 -->
 <!DOCTYPE html>
 <html>
 <head>
 <title>購入確認画面</title>
-<link href="${pageContext.request.contextPath}/css/user/userShoppingCss.css" rel="stylesheet"
-	type="text/css" />
+<link href="../css/userShoppingCss.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<h3>次の商品を購入しますか？</h3>
-	<main>
-	<div class=main>
-	<form action="/ECsite/UserShopping" method="get">
 
-		<!-- リクエストから表示する値を取得 -->
-				<p><jsp:getProperty name="item_bean" property="product"></jsp:getProperty></p>
-				<p><jsp:getProperty name="item_bean" property="count"></jsp:getProperty></p>
-				<P><jsp:getProperty name="product_bean" property="price"></jsp:getProperty></P>
-				<p><%=request.getAttribute("count")%></p>
+<main>
+    <h1>購入確認</h1>
+    <p>次の商品を購入しますか？</p>
 
-				<div class="button">
-				<input class="back_button" type="button"
-					onclick="location.href='userMain.jsp'" value="買い物を続ける">
+    <form action="/ECsite/UserShopping" method="get">
+        <div class="shopping_table">
 
-						<input class="result_button" type="submit" value="購入を確定する">
-				</div>
-			</form>
-		</div>
-	</main>
+                    <!-- リクエストから表示する値を取得 -->
+                    <jsp:getProperty name="item_bean" property="product"></jsp:getProperty>
+                    <jsp:getProperty name="item_bean" property="count"></jsp:getProperty>
+                    <jsp:getProperty name="product_bean" property="price"></jsp:getProperty>
+                    <%=request.getAttribute("count")%>
+                    <div class="button">
+                        <input class="result_button" type="submit" value="購入する">
+
+            </div>
+            </div>
+
+    </form>
+		<input type="button" onclick="location.href='userMain.jsp'" value="買い物を続ける">
+
+</main>
 </body>
 </html>

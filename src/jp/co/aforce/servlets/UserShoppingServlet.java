@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import jp.co.aforce.models.SelectProductModel;
 
 public class UserShoppingServlet extends HttpServlet {
+
 	@SuppressWarnings("unused")
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
