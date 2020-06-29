@@ -24,9 +24,9 @@
 
 
 			<div class="button">
-	<input class="top_button" type="button"
-		onclick="location.href='userMain.jsp'" value="TOPへ戻る">
-		</div>
+				<input class="top_button" type="button"
+					onclick="location.href='userMain.jsp'" value="TOPへ戻る">
+			</div>
 		</div>
 	</main>
 </body>

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.beans.ItemBean;
-import jp.co.aforce.tool.Action;
+import tool.Action;
 
 public class UserCartRemoveServlet extends Action {
 

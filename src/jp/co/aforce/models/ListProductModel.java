@@ -29,7 +29,7 @@ public class ListProductModel {
 			while (rs.next()) {
 				ListProductsBean listProductBean = new ListProductsBean();
 
-				listProductBean.setId(rs.getString("product_id"));
+				listProductBean.setId(rs.getInt("product_id"));
 				listProductBean.setName(rs.getString("name"));
 				listProductBean.setImage(rs.getString("image"));
 				listProductBean.setCategory(rs.getString("category"));
