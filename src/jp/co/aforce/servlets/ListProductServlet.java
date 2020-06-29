@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.aforce.beans.ListProductsBean;
+import jp.co.aforce.beans.ListProductBean;
 import jp.co.aforce.models.ListProductModel;
 
 @SuppressWarnings("serial")
@@ -19,10 +19,10 @@ public class ListProductServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		List<ListProductsBean> productList = new ArrayList<ListProductsBean>();
-		ListProductsBean listProductsBean = new ListProductsBean();
+		List<ListProductBean> productList = new ArrayList<ListProductBean>();
+		ListProductBean listProductBean = new ListProductBean();
 		ListProductModel listProductModel = new ListProductModel();
-		productList = listProductModel.listProduct(listProductsBean); //model処理実行
+		productList = listProductModel.listProduct(listProductBean); //model処理実行
 		request.setAttribute("productList", productList);
 		RequestDispatcher rDispatcher = request.getRequestDispatcher("/views/user/userMain.jsp");
 		rDispatcher.forward(request, response);
@@ -39,8 +39,8 @@ public class ListProductServlet extends HttpServlet {
 		//パラメタ取得
 		String list = request.getParameter("List");
 
-		List<ListProductsBean> productList = new ArrayList<ListProductsBean>();
-		ListProductsBean listProductsBean = new ListProductsBean();
+		List<ListProductBean> productList = new ArrayList<ListProductBean>();
+		ListProductBean listProductBean = new ListProductBean();
 		ListProductModel listProductModel = new ListProductModel();
 
 		String forward_jsp = null;
@@ -49,14 +49,14 @@ public class ListProductServlet extends HttpServlet {
 
 		switch (list) {
 		case "delete": //指定jspに移動
-			productList = listProductModel.listProduct(listProductsBean); //model処理実行
+			productList = listProductModel.listProduct(listProductBean); //model処理実行
 			request.setAttribute("productList", productList);
 			forward_jsp = "/views/admin/deleteProduct.jsp";
 			break;
 
 
 		case "購入を確定": //指定jspに移動
-			productList = listProductModel.listProduct(listProductsBean); //model処理実行
+			productList = listProductModel.listProduct(listProductBean); //model処理実行
 			request.setAttribute("productList", productList);
 			forward_jsp = "/views/user/userMain.jsp";
 			break;

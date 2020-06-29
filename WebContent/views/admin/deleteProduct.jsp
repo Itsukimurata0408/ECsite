@@ -43,8 +43,7 @@
 					<div class="list">
 						<c:forEach var="product" items="${productList}">
 							<tr>
-								<td><input type="checkbox" name="delete"
-									value=${product.product_id}></td>
+								<td><input type="checkbox" name="delete" value=${product.product_id}></td>
 								<td>${product.product_id}</td>
 								<td>${product.name}</td>
 								<td>${product.image}</td>
@@ -60,6 +59,7 @@
 				</table>
 
 				<div class="button">
+					<input type="button" onclick="location.href='/ECsite/views/admin/adminMenu.jsp'" value="メニューへ">
 					<button type="submit">削除</button>
 				</div>
 			</form>
