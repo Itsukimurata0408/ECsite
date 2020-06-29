@@ -41,7 +41,7 @@ public class UserShoppingServlet extends HttpServlet {
 		SelectProductModel spm = new SelectProductModel();
 		String forward_jsp = null;
 
-		if (product != null && id != null && count != null) {
+		if (product != null && id != null && count != null && id != null) {
 
 			forward_jsp = "/views/user/userResult.jsp";
 

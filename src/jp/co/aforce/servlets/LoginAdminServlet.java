@@ -59,7 +59,7 @@ public class LoginAdminServlet  extends HttpServlet{
 //			request.setAttribute("users",users);
 
 //			ログインに成功した先の JSP を指定
-			forword_jsp = "/pages/admin.jsp";
+			forword_jsp = "/views/admin/adminMenu.jsp";
 
 //		ログインが失敗したときの処理
 		}else {

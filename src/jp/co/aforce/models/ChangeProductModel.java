@@ -20,17 +20,17 @@ public class ChangeProductModel {
 			//DB接続するための手続
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
-
-			if("変更なし".equals(image)){
-
+			if(image.isEmpty()){
 
 				System.out.println("if");
+
 
 				//SQLを実行
 				SQL = "UPDATE `product` " +
 								"SET name = '"+name+"', category = '"+category+"', price = '"+price+"', detail = '"+detail+"'"
 								+ " WHERE product_id = '"+id+"'";
 				DBUtil.execute(SQL);
+
 
 
 		}else {
@@ -42,6 +42,8 @@ public class ChangeProductModel {
 						"SET name = '"+ name+"', image = '"+image+"', category = '"+category+"', price = '"+price+"', detail = '"+detail+"'"
 								+ " WHERE product_id = '"+id+"'";
 				DBUtil.execute(SQL);
+
+
 
 
 		}
@@ -62,6 +64,8 @@ public class ChangeProductModel {
 				spBean.setDetail(sers.getString("detail"));
 				sp.add(spBean);
 			}
+
+
 
 		}catch(Exception e) {
 			e.printStackTrace();

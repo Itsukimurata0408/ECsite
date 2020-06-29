@@ -7,10 +7,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>商品詳細変更</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminConfirm.css">
+
 </head>
 <body>
 
+<header>
+		<h4>商品詳細変更</h4>
+		<button type="button" onclick="history.back()">←</button>
+	</header>
+
+
+<main>
 <p>${Emsg }</p>
 
 
@@ -66,6 +75,6 @@
 </c:forEach>
 </form>
 
-
+</main>
 </body>
 </html>

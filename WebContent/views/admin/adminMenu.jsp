@@ -29,11 +29,11 @@
 				<button type="button">商品情報登録</button>
 			</p>
 
-			<p class="delete">
 			<form action="/ECsite/ListProductServlet" method="post">
-				<button type="submit" name="List" value="delete">商品情報削除</button>
+				<p class="delete">
+					<button type="submit" name="List" value="delete">商品情報削除</button>
+				</p>
 			</form>
-			</p>
 
 			<p class="update">
 				<button type="button">商品情報変更</button>
