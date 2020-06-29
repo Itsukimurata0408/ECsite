@@ -22,14 +22,14 @@ public class ListProductModel {
 			DBUtil.makeConnection();
 			DBUtil.makeStatement();
 
-			String sql = "SELECT * FROM `products`";
+			String sql = "SELECT * FROM `product`";
 			rs = DBUtil.execute(sql);
 
 			rs.beforeFirst();
 			while (rs.next()) {
 				ListProductBean listProductBean = new ListProductBean();
 
-				listProductBean.setId(rs.getString("id"));
+				listProductBean.setProduct_id(rs.getString("product_id"));
 				listProductBean.setName(rs.getString("name"));
 				listProductBean.setImage(rs.getString("image"));
 				listProductBean.setCategory(rs.getString("category"));
