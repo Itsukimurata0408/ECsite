@@ -1,0 +1,33 @@
+@charset "UTF-8";
+body{
+	background-color:#EEEEEE;
+}
+
+.top_photo{
+	text-align:center;
+}
+
+.header{
+text-align: right;
+    padding: 10px;
+    color:  #fff;               /* 文字色 */
+    margin:  10px;              /* 外側の余白 */
+    border-radius:  5px;
+}
+
+.main {
+    border:2px solid white;
+}
+
+tr{
+	width:50px;
+	height:10px;
+	position:absolte;
+	margin:auto;
+}
+
+{
+	padding:30px;
+	border:5px solid white;
+	background-color:#EEEEEE;
+}

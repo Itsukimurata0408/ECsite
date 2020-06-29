@@ -21,11 +21,13 @@
 <main>
 <p>${nf } </p>
 
+
 <div>
 <c:forEach var="sp" items="${select}">
-
-		<p><a href="/ECsite/productDetailServlet?id=${sp.id }">${sp.id }${sp.name }</a></p>
-
+	<form action="/ECsite/registerAdminServlet" method="get">
+		<p>${sp.id }</p>
+		<p>${sp.name }</p>
+	</form>
 </c:forEach>
 </div>
 </main>

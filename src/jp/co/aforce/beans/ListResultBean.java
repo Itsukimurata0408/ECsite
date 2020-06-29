@@ -1,6 +1,6 @@
 package jp.co.aforce.beans;
 
-public class ProductDetailBean {
+public class ListResultBean {
 	private String id ;
 	private String name ;
 	private String image;

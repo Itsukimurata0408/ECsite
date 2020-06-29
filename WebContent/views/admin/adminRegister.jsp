@@ -14,6 +14,7 @@
 		<button type="button" onclick="history.back()">←</button>
 	</header>
 
+
 <main>
 <h1>商品情報登録</h1>
 <p>${Emsg}</p>
@@ -58,7 +59,6 @@
 
 		<input type="submit" value="確認">
 		</p>
-
 	</form>
 	</main>
 </body>
