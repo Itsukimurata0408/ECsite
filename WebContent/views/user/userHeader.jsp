@@ -1,34 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<%--セレクトボックスで要素の表示をフェードインさせるｊｓ--%>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-		$('#select').change(function() {
-			var val = $('select option:selected').val();
-			if (val == 'select')
-				return;
-			$('section').fadeOut();
-			$('section#' + val).fadeIn();
-		});
-	});
-</script>
-<%--cssの宣言--%>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/user/userHeader.css">
-</head>
 <%-- header --%>
 <header>
 
 	<%--EL方式でログインされた場合にusernameを表示--%>
 	<p>ようこそ「${name}」さん</p>
 	<p>
-		<a href="userCart.jsp?submit=cart">カート</a> <a
+	<a href="ListProduct.action">商品</a>
+		<a href="UserCartAdd.action">カート</a> <a
 			href="/ECsite/UserLoginServlet?submit=login">ログイン</a> <a
 			href="/ECsite/UserLogoutServlet?submit=logout">ログアウト</a>
 	</p>
@@ -65,4 +44,3 @@
 		</form>
 	</section>
 </header>
-</html>

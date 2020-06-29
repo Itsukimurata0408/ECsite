@@ -1,17 +1,17 @@
 package jp.co.aforce.beans;
 
 public class ListProductsBean {
-	private String id;
+	private int id;
 	private String name;
 	private String image;
 	private String category;
 	private int price;
 	private String detail;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
