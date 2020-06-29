@@ -16,15 +16,15 @@
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
+	
+	
+	
+	
 <title>宮城県特産品通販サイト</title>
 </head>
 
 
-	<body>
+<body>
 
 
 	<header> </header>
@@ -34,9 +34,9 @@
 		<p>笑顔咲くたび 伊達な旅</p>
 		<p>海にも山にも囲まれている宮城県</p>
 		<p>日本中 世界中の皆様へ自慢の特産品で笑顔をお届けします</p>
+	
 
-
-		<h2>RECOMMEND ITEM</h2>
+	<h2>RECOMMEND ITEM</h2>
 
 
 		<table>

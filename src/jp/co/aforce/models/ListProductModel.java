@@ -48,4 +48,3 @@ public class ListProductModel {
 		return productList;
 		}
 	}
-

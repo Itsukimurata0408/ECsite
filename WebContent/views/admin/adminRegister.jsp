@@ -10,15 +10,15 @@
 <body>
 <header>
 		<h4>商品情報登録</h4>
-		<button type="button" onclick="history.back()">←</button>
-	</header>
+			<button type="button" onclick="history.back()">←</button>
+			</header>
 <main>
 <h1>商品情報登録</h1>
 <p>${Emsg}</p>
 	<p>${Smsg}</p>
-
+	
 	<form action="/ECsite/registerConfirmServlet" method="post">
-
+	
 		<p>
 			品名 <input type="text" name="name">
 		</p>
@@ -53,10 +53,9 @@
 
 
 		<p>
-
+		
 		<input type="submit" value="確認">
 		</p>
-
 	</form>
 	</main>
 </body>
