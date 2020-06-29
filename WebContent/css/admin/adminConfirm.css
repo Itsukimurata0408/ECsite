@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.top{
+	text-align: center;
+}
+
+td.title{
+	background-color: #99cc00;
+}

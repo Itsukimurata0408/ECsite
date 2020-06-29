@@ -18,17 +18,17 @@ html,body{
 
 
 header{
-	background-color:#F5F5F5;
+	background-color:#DCDCDC;
 	height:4%;
 	width:100%;
 	position: relative;
 
 }
 
-button{
-	font-size: 27px;
+.back button{
+	font-size: 23px;
 	position: absolute;
-	top: -6px;
+	top: -52px;
 	left: 10px;
 }
 
@@ -57,9 +57,8 @@ h1{
 	margin: 20px;
 }
 
-form{
+.menu{
 	position: relative;
-	font-size: 150px;
 	width: 340px;
 	height: 540px;
 	background-color:#F5F5F5;
@@ -69,11 +68,12 @@ form{
 
 	border: double 5px;
 	border-radius: 20px;
-
 }
 
-.regist input,.delete input,.update input{
-	font-size: 40px;
+button{
+	font-size: 50px;
+	margin-top:50px;
+	margin-bottom:55px;
 
 }
 

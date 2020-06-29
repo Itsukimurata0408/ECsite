@@ -18,7 +18,7 @@ public class LoginBean {
 		public LoginBean(){};
 
 		//get
-		public String  getUsername() {
+		public String getUsername() {
 			return username;
 		}
 
