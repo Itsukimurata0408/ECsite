@@ -116,5 +116,13 @@
 		<servlet-name>ResultServlet</servlet-name>
 		<url-pattern>/Result</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>jp.co.aforce.servlets.UserLogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/UserLogoutServlet</url-pattern>
+	</servlet-mapping>
 
 </web-app>
