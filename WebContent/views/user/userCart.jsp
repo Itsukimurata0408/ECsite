@@ -40,13 +40,13 @@
 		<c:forEach var="item" items="${cart}">
 
 			<tr>
-				<td><img src="img/${ItemBean.product.id}.jpg" width=110
+				<td><img src="img/${item.product.id}.jpg" width=110
 					height=82></td>
-				<td>商品番号${ItemBean.product.id}</td>
-				<td>商品名${ItemBean.product.name}</td>
-				<td>金額${ItemBean.product.price}円</td>
-				<td>個数${ItemBean.count}</td>
-				<td><a href="UserCartRemoveServret?id=${ItemBean.product.id}">カートから削除</a></td>
+				<td>商品番号${item.product.id}</td>
+				<td>商品名${item.product.name}</td>
+				<td>金額${item.product.price}円</td>
+				<td>個数${item.count}</td>
+				<td><a href="UserCartRemoveServret?id=${item.product.id}">カートから削除</a></td>
 
 
 				<%
@@ -74,6 +74,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<a href="UserShopping.action">購入確認へ進む</a>
 
 </body>
 </html>

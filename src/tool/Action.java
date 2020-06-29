@@ -3,7 +3,7 @@
  */
 
 
-package jp.co.aforce.tool;
+package tool;
 
 
 import javax.servlet.http.HttpServletRequest;

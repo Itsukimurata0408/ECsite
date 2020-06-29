@@ -12,14 +12,26 @@
 
 <link href="${pageContext.request.contextPath}/css/user/userMainCss.css"
 	rel="stylesheet" type="text/css" />
+	<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/user/userHeader.css">
 <meta charset="UTF-8">
 
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-
+<script type="text/javascript">
+	$(function() {
+		$('#select').change(function() {
+			var val = $('select option:selected').val();
+			if (val == 'select')
+				return;
+			$('section').fadeOut();
+			$('section#' + val).fadeIn();
+		});
+	});
+</script>
+<%--cssの宣言--%>
 
 <title>宮城県特産品通販サイト</title>
 </head>
@@ -50,24 +62,17 @@
 		<hr width="800">
 
 		<div class="main">
-
-			<c:forEach var="products" items="${productList}">
+			<c:forEach var="product" items="${productList}">
 				<table>
 					<div class="product">
 						<tr>
-							<td><img src="${products.image}">
-							<img src="${pageContext.request.contextPath}/img/zunda.jpg"></td>
-
-
-
-							<td class="name">${products.name}</td>
-							<td class="category">${products.category}</td>
-							<td class="price">${products.price}円</td>
-							<td class="detail">${products.detail}</td>
-
+							<td><img src="${product.image}">
+							<td class="name">${product.name}</td>
+							<td class="category">${product.category}</td>
+							<td class="price">${product.price}円</td>
+							<td class="detail">${product.detail}</td>
 							<td class="id">
-								<button type="submit" name="List" value="menu"
-									id="${products.id}">カートへ入れる</button>
+								<a href="UserCartAdd.action?id=${product.id}">カートに追加</a>
 							</td>
 
 
@@ -76,6 +81,7 @@
 					</div>
 				</table>
 			</c:forEach>
+
 
 
 		</div>
