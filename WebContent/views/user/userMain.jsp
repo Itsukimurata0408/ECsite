@@ -51,23 +51,22 @@
 
 		<div class="main">
 
-			<c:forEach var="products" items="${productList}">
+			<c:forEach var="product" items="${productList}">
 				<table>
 					<div class="product">
 						<tr>
-							<td><img src="${products.image}">
-							<img src="${pageContext.request.contextPath}/img/zunda.jpg"></td>
+							<td><img src="${product.image}">
 
 
 
-							<td class="name">${products.name}</td>
-							<td class="category">${products.category}</td>
-							<td class="price">${products.price}円</td>
-							<td class="detail">${products.detail}</td>
+							<td class="name">${product.name}</td>
+							<td class="category">${product.category}</td>
+							<td class="price">${product.price}円</td>
+							<td class="detail">${product.detail}</td>
 
 							<td class="id">
 								<button type="submit" name="List" value="menu"
-									id="${products.id}">カートへ入れる</button>
+									id="${product.id}">カートへ入れる</button>
 							</td>
 
 
