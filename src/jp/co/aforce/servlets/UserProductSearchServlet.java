@@ -24,7 +24,7 @@ public class UserProductSearchServlet extends HttpServlet {
 		//selectにはnull格納
 		//selectにはカテゴリで選択されたものが入る（肉・卵・乳製品）
 		String select= null;
-		//typeにはカテゴリが入る（）
+		//typeにはカテゴリが入る
 		String type=null;
 
 		//valueに値が入っているかの確認
