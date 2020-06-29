@@ -28,30 +28,33 @@
 
 
 	<header>
-		<!-- %@ include file="userHeader.jsp"%-->
+		<!-- jsp:include page="userHeader.jsp"/-->
 	</header>
 
 	<img src="${pageContext.request.contextPath}/img/table.jpeg"
 		class="main_photo">
-	<main>
+	<main class="explanation">
 		<!-- 軽めな県紹介 -->
 		<h2>ABOUT</h2>
-		<p>笑顔咲くたび 伊達な旅</p>
+		<div class="ex">
+		<p >笑顔咲くたび 伊達な旅</p>
 		<p>海にも山にも囲まれている宮城県</p>
 		<p>日本中 世界中の皆様へ自慢の特産品で笑顔をお届けします</p>
+		</div>
 
 
-		<h2>RECOMMEND ITEM</h2>
 
-
+<div class="line">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
 		<div class="main">
-				<table>
+
 					<c:forEach var="products" items="${productList}">
+					<table>
 					<div class="product">
 					<tr>
 
 							<td class="img">
-								<!-- img src="${products.image}"-->
+
+								<img src="${products.image}">
 								<img src="${pageContext.request.contextPath}/img/zunda.jpg">
 							</td>
 							<td class="name">${products.name}</td>
@@ -68,9 +71,10 @@
 						</tr>
 
 						</div>
+						</table>
 					</c:forEach>
 
-				</table>
+
 			</div>
 
 		<footer>

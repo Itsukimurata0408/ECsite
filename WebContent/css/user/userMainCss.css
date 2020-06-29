@@ -2,13 +2,31 @@
 
 body {
 	background-color: white;
+	width:1850px;
 }
 
-.main_photo {
+table{
+	margin:0 50px 50px 50px;
+}
+
+.detail{
+	height:calc(1.2em*7);
+}
+
+.ex,.list_name{
+	font-size:20px;
+	font-weight:200;
+}
+
+.main_photo,.explanation {
 	text-align: center;
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.line{
+	margin:50px 0 0 50px;
 }
 
 .header {
@@ -19,36 +37,27 @@ body {
 	border-radius: 5px;
 }
 
-.main{
-	display:flex-box;
-	flex-wrap:wrap;
-
-
+.main {
+	flex-wrap: wrap;
+	vertical-align: middle;
+	display: flex;
+	justify-content: space-between;
+	align-content:space-around;
 }
 
-
-
-
-
-
-
-
-.img,.name,.detail,.price{
-	width:400px;          /*青部分の横幅*/
-	margin:0 0 8px 0;
-	padding-top:0;
-	padding-bottom:0;
-	font-family:"ヒラギノ角ゴ";
-	font-size:20px;
+.img, .name, .detail, .price {
+	width: 400px; /*青部分の横幅*/
+	margin: 0 0 8px 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-family: "ヒラギノ角ゴ";
+	font-size: 20px;
 }
 
-td{
-	display:block;
+td {
+	display: block;
 }
 
-.category{
-	display:none;
+.category {
+	display: none;
 }
-
-
-
