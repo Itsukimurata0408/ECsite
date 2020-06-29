@@ -1,39 +1,71 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page session="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@ page session="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>商品削除画面</title>
+<link rel="stylesheet" type="text/css"
+	href="../../css/admin/deleteProduct.css">
 </head>
 
 <body>
-<table>
-  <tr>
-    <th>商品ID</th>
-    <th>商品名</th>
-    <th>画像</th>
-    <th>カテゴリー</th>
-    <th>価格</th>
-    <th>商品詳細</th>
-  </tr>
-<c:forEach var="products" items="${productList}">
-  <tr>
 
-    <td><c:out value="${products.id}"/></td>
-    <td><c:out value="${products.name}"/></td>
-    <td><c:out value="${products.image}"/></td>
-    <td><c:out value="${products.category}"/></td>
-    <td><c:out value="${products.price}"/></td>
-    <td><c:out value="${products.detail}"/></td>
+	<header>
+		<h4>商品削除画面</h4>
+		<div class="back">
+			<button type="button" onclick="history.back()">←</button>
+		</div>
+	</header>
 
-  </tr>
-</c:forEach>
+	<main>
 
-</table>
-<br/>
+		<h1>商品削除画面</h1>
+
+		<p>${Smsg}</p>
+		<p>${Emsg}</p>
+
+		<form action="/ECsite/DeleteProductServlet" method="get">
+			<table>
+				<tr>
+					<th>商品ID</th>
+					<th>商品名</th>
+					<th>画像</th>
+					<th>カテゴリー</th>
+					<th>価格</th>
+					<th>商品詳細</th>
+				</tr>
+				<div class="list">
+					<tr>
+
+						<c:forEach var="product" items="${productList}">
+
+							<td><input type="checkbox" name="delete"
+								value=${product.product_id}></td>
+							<td>${product.product_id}</td>
+							<td>${product.name}</td>
+							<td>${product.image}</td>
+							<td>${product.category}</td>
+							<td>${product.price}</td>
+							<td>${product.detail}</td>
+
+
+						</c:forEach>
+					</tr>
+				</div>
+			</table>
+
+			<div class="button">
+				<p>
+					<button type="submit">削除</button>
+				</p>
+			</div>
+		</form>
+
+	</main>
 </body>
+
 </html>

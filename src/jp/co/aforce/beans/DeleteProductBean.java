@@ -1,14 +1,15 @@
 package jp.co.aforce.beans;
 
-public class ListProductBean {
+public class DeleteProductBean {
+
 	private String product_id;
 	private String name;
 	private String image;
 	private String category;
-	private int price;
+	private String price;
 	private String detail;
 
-	public ListProductBean() {};
+	public DeleteProductBean() {};
 
 	public String getProduct_id() {
 		return product_id;
@@ -34,10 +35,10 @@ public class ListProductBean {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	public String getDetail() {
@@ -46,16 +47,5 @@ public class ListProductBean {
 	public void setDetail(String detail) {
 		this.detail = detail;
 	}
-
-	public ListProductBean(String product_id, String name,String image,String category,int price,String detail) {
-		this.product_id = product_id;
-		this.name = name;
-		this.image = image;
-		this.category = category;
-		this.price = price;
-		this.detail = detail;
-	}
-
-
 
 }
