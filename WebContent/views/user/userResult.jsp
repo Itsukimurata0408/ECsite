@@ -22,7 +22,6 @@
 				<img src="../../img/logo_chara.jpg" class="image">
 			</p>
 
-			<p class="no">お取引番号:</p>
 
 			<div class="button">
 	<input class="top_button" type="button"
