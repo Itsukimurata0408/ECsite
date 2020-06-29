@@ -56,7 +56,7 @@
 
 
 		<p>
-
+		<input type="button" onclick="location.href='/ECsite/views/admin/adminMenu.jsp'" value="メニューへ">
 		<input type="submit" value="確認">
 		</p>
 	</form>

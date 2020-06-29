@@ -24,10 +24,10 @@
 
 <div>
 <c:forEach var="sp" items="${select}">
-	<form action="/ECsite/registerAdminServlet" method="get">
-		<p>${sp.id }</p>
-		<p>${sp.name }</p>
-	</form>
+
+		<p><a href="/ECsite/productDetailServlet?id=${sp.id }">${sp.id }${sp.name }</a></p>
+
+
 </c:forEach>
 </div>
 </main>
