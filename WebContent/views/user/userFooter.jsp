@@ -23,7 +23,7 @@
 <div class="user">
 <ul>
 <li><a href="userlogin.jsp">ユーザアカウント</a></li>
-<li><a href="../admin/loginAdmin.jsp">管理者アカウント</a></li>
+<li><a href="${pageContext.request.contextPath}/views/admin/loginAdmin.jsp">管理者アカウント</a></li>
 </ul>
 </div>
 

@@ -24,10 +24,15 @@
 </head>
 
 
-	<body>
+<body>
 
 
-	<header> </header>
+	<header>
+		<!-- %@ include file="userHeader.jsp"%-->
+	</header>
+
+	<img src="${pageContext.request.contextPath}/img/table.jpeg"
+		class="main_photo">
 	<main>
 		<!-- 軽めな県紹介 -->
 		<h2>ABOUT</h2>
@@ -39,31 +44,34 @@
 		<h2>RECOMMEND ITEM</h2>
 
 
-		<table>
-
-			<div class="main">
-				<c:forEach var="products" items="${productList}">
+		<div class="main">
+				<table>
+					<c:forEach var="products" items="${productList}">
+					<div class="product">
 					<tr>
 
-						<p>
-							<img src="${pageContext.request.contextPath}/img/zunda.jpg">
-						</p>
-						<p>${products.name}</p>
-						<p>${products.category}</p>
-						<p>${products.price}</p>
-						<p>${products.detail}</p>
-						<form action="/ECsite/ListProductServlet" method="post">
-							<p>
+							<td class="img">
+								<!-- img src="${products.image}"-->
+								<img src="${pageContext.request.contextPath}/img/zunda.jpg">
+							</td>
+							<td class="name">${products.name}</td>
+							<td class="category">${products.category}</td>
+							<td class="price">${products.price}円</td>
+							<td class="detail">${products.detail}</td>
+
+							<td class="id">
 								<button type="submit" name="List" value="menu"
-									id="${products.id}"></button>
-							</p>
-						</form>
+									id="${products.id}">カートへ入れる</button>
+							</td>
 
 
-					</tr>
-				</c:forEach>
+						</tr>
+
+						</div>
+					</c:forEach>
+
+				</table>
 			</div>
-		</table>
 
 		<footer>
 			<%@ include file="userFooter.jsp"%>

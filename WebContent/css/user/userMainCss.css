@@ -1,33 +1,54 @@
 @charset "UTF-8";
-body{
-	background-color:#EEEEEE;
+
+body {
+	background-color: white;
 }
 
-.top_photo{
-	text-align:center;
+.main_photo {
+	text-align: center;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
 }
 
-.header{
-text-align: right;
-    padding: 10px;
-    color:  #fff;               /* 文字色 */
-    margin:  10px;              /* 外側の余白 */
-    border-radius:  5px;
+.header {
+	text-align: right;
+	padding: 10px;
+	color: #fff; /* 文字色 */
+	margin: 10px; /* 外側の余白 */
+	border-radius: 5px;
 }
 
-.main {
-    border:2px solid white;
+.main{
+	display:flex-box;
+	flex-wrap:wrap;
+
+
 }
 
-tr{
-	width:50px;
-	height:10px;
-	position:absolte;
-	margin:auto;
+
+
+
+
+
+
+
+.img,.name,.detail,.price{
+	width:400px;          /*青部分の横幅*/
+	margin:0 0 8px 0;
+	padding-top:0;
+	padding-bottom:0;
+	font-family:"ヒラギノ角ゴ";
+	font-size:20px;
 }
 
-{
-	padding:30px;
-	border:5px solid white;
-	background-color:#EEEEEE;
+td{
+	display:block;
 }
+
+.category{
+	display:none;
+}
+
+
+
