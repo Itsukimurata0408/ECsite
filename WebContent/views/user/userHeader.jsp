@@ -20,7 +20,7 @@
 </script>
 <%--cssの宣言--%>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/userHeader.css">
+	href="${pageContext.request.contextPath}/css/user/userHeader.css">
 </head>
 <%-- header --%>
 <header>
