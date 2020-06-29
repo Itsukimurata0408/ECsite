@@ -6,17 +6,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>商品情報変更完了</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminSelect.css">
 </head>
 <body>
+<header>
+		<h4>商品情報変更完了</h4>
+		<button type="button" onclick="history.back()">←</button>
+	</header>
+<main>
 <c:forEach var="cp" items="${update}">
-成功
+<div>
 		<p>${cp.id }</p>
 		<p>${cp.name }</p>
-		<p>${cp.image }</p>
+		<p><img src="${cp.image }" height="100px" width="100px"></p>
 		<p>${cp.category }</p>
 		<p>${cp.price }</p>
 		<p>${cp.detail }</p>
+</div>
 </c:forEach>
+<input type="button" onclick="location.href='views/admin/adminMenu.jsp'" value="メニューへ">
+</main>
 </body>
 </html>

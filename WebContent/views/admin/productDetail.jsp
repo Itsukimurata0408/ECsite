@@ -7,14 +7,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>商品詳細変更</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminConfirm.css">
+
 </head>
 <body>
 
+<header>
+		<h4>商品詳細変更</h4>
+		<button type="button" onclick="history.back()">←</button>
+	</header>
+
+
+<main>
 <p>${Emsg }</p>
 
 
-<form action="/ECsite/changeProductServlet" method="get">
+
+<form action="/ECsite/changeConfirmServlet" method="get">
+
 <c:forEach var="pr" items="${product}">
 
 
@@ -56,7 +67,7 @@
 
 		<p>
 
-		<input type="submit" value="登録">
+		<input type="submit" value="確認">
 		</p>
 
 
@@ -64,6 +75,6 @@
 </c:forEach>
 </form>
 
-
+</main>
 </body>
 </html>

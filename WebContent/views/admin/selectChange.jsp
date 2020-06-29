@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>商品詳細変更</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script	type="text/javascript">
 $(function() {
@@ -12,7 +12,7 @@ $(function() {
 		  var val = $('select option:selected').val();
 		  if (val == 'select') return;
 		  $('section').fadeOut();
-		  $('section#' + val ).fadeIn();
+		  setTimeout($('section#' + val ).fadeIn(),3000);
 		});
 	});
 </script>
@@ -21,7 +21,13 @@ $(function() {
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminSelect.css">
 
 <body>
+<header>
+		<h4>商品詳細変更</h4>
+		<button type="button" onclick="history.back()">←</button>
+	</header>
 
+<main>
+<div>
 	<p>
 			検索内容 <select id="select">
 			<option value="select">選択してください</option>
@@ -31,6 +37,7 @@ $(function() {
 			<option value="detail">詳細</option>
 			</select>
 	</p>
+
 <section id="name">
 <form action="/ECsite/selectProductServlet" method="get">
 <p>商品名<input type="text" name="name" ></p>
@@ -72,9 +79,8 @@ $(function() {
 <input type="submit" value="検索" class="button">
 </form>
 </section>
-
-
-
+</div>
+</main>
 </body>
 
 </html>

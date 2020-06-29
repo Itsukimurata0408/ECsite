@@ -1,8 +1,16 @@
 @charset "UTF-8";
-section {
-
-  display: none;
+table {
+  width: 300px;
 }
+
+.top{
+	text-align: center;
+}
+
+td.title{
+	background-color: #99cc00;
+}
+
 @charset "UTF-8";
 
 html,body{
@@ -72,17 +80,6 @@ form{
 	border: double 5px;
 	border-radius: 20px;
 
-}
-
-div{
-	font-size: 28px;
-	background-color:#F5F5F5;
-	text-align: center;
-	padding: 40px;
-	margin: 20px;
-
-	border: double 5px;
-	border-radius: 20px;
 }
 
 .button{
