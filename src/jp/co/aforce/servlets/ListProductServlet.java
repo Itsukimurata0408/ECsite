@@ -53,6 +53,16 @@ public class ListProductServlet extends HttpServlet {
 			request.setAttribute("productList", productList);
 			forward_jsp = "/views/admin/deleteProduct.jsp";
 			break;
+
+
+		case "購入を確定": //指定jspに移動
+			productList = listProductModel.listProduct(listProductsBean); //model処理実行
+			request.setAttribute("productList", productList);
+			forward_jsp = "/views/user/userMain.jsp";
+			break;
+
+
+
 		default:
 
 			break;

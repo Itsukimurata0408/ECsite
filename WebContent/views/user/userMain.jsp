@@ -3,6 +3,7 @@
 <%@ page session="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 
 <!DOCTYPE html>
@@ -37,26 +38,26 @@
 		<!-- 軽めな県紹介 -->
 		<h2>ABOUT</h2>
 		<div class="ex">
-		<p >笑顔咲くたび 伊達な旅</p>
-		<p>海にも山にも囲まれている宮城県</p>
-		<p>日本中 世界中の皆様へ自慢の特産品で笑顔をお届けします</p>
+			<p>笑顔咲くたび 伊達な旅</p>
+			<p>海にも山にも囲まれている宮城県</p>
+			<p>日本中 世界中の皆様へ自慢の特産品で笑顔をお届けします</p>
 		</div>
 
 
 
-<div class="line">----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+		<hr width="800">
+
 		<div class="main">
 
-					<c:forEach var="products" items="${productList}">
-					<table>
+			<c:forEach var="products" items="${productList}">
+				<table>
 					<div class="product">
-					<tr>
+						<tr>
+							<td><img src="${products.image}">
+							<img src="${pageContext.request.contextPath}/img/zunda.jpg"></td>
 
-							<td class="img">
 
-								<img src="${products.image}">
-								<img src="${pageContext.request.contextPath}/img/zunda.jpg">
-							</td>
+
 							<td class="name">${products.name}</td>
 							<td class="category">${products.category}</td>
 							<td class="price">${products.price}円</td>
@@ -70,12 +71,12 @@
 
 						</tr>
 
-						</div>
-						</table>
-					</c:forEach>
+					</div>
+				</table>
+			</c:forEach>
 
 
-			</div>
+		</div>
 
 		<footer>
 			<%@ include file="userFooter.jsp"%>
