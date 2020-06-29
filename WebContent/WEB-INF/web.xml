@@ -116,4 +116,5 @@
 		<servlet-name>ResultServlet</servlet-name>
 		<url-pattern>/Result</url-pattern>
 	</servlet-mapping>
+
 </web-app>

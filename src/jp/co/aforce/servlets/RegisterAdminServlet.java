@@ -34,10 +34,6 @@ public class RegisterAdminServlet extends HttpServlet{
 		boolean enter = true;
 
 
-		//		for(int j = 0;j<parameter.length;j++) {
-		//			System.out.println(parameter[j]);
-		//		}
-
 		String name = null;
 		String image = null;
 		String category = null;
@@ -105,7 +101,7 @@ public class RegisterAdminServlet extends HttpServlet{
 		//		全ての項目が入力されていた時の処理
 		if(enter == true) {
 			if(status==0) {
-
+				image = image.replace("\\","\\\\");
 				RegisterAdminModel registerAdminModel = new RegisterAdminModel();
 
 				if(registerAdminModel.registerCheck(name,image,category,price1,detail) == true) {

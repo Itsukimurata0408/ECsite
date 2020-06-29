@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>管理者ログイン</title>
-<link rel="stylesheet" type="text/css" href="../../css/admin/loginAdmin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/loginAdmin.css">
 </head>
 
 <body>

@@ -59,6 +59,7 @@ public class ChangeProductServlet extends HttpServlet {
 		}
 
 		if (status == true) {
+			image = image.replace("\\","\\\\");
 			List<SelectProductBean> list = ChangeProductModel.changeCheck(id, name, image, category, price, detail);
 
 			request.setAttribute("update", list);
