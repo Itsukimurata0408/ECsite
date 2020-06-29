@@ -7,8 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>管理者TOPメニュー</title>
-<link rel="stylesheet" type="text/css"
-	href="../../css/admin/adminMenu.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminMenu.css">
 </head>
 
 <body>
@@ -26,7 +25,7 @@
 
 		<div class="menu">
 			<p class="regist">
-				<button type="button">商品情報登録</button>
+				<button type="button" onclick="location.href='/ECsite/views/admin/adminRegister.jsp'">商品情報登録</button>
 			</p>
 
 			<form action="/ECsite/ListProductServlet" method="post">
@@ -36,7 +35,7 @@
 			</form>
 
 			<p class="update">
-				<button type="button">商品情報変更</button>
+				<button type="button" onclick="location.href='/ECsite/views/admin/selectChange.jsp'">商品情報変更</button>
 			</p>
 		</div>
 
