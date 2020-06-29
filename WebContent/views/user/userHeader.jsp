@@ -7,9 +7,9 @@
 	<p>ようこそ「${name}」さん</p>
 	<p>
 	<a href="ListProduct.action">商品</a>
-		<a href="UserCartAdd.action">カート</a> <a
-			href="/ECsite/UserLoginServlet?submit=login">ログイン</a> <a
-			href="/ECsite/UserLogoutServlet?submit=logout">ログアウト</a>
+		<a href="userCart.jsp">カート</a> <a
+			href="/ECsite/UserLoginServlet">ログイン</a> <a
+			href="/ECsite/UserLogoutServlet">ログアウト</a>
 	</p>
 	<p>
 		<select id="select" name="choice">

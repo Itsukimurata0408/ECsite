@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,9 @@
 		autocomplete="off">
 
 		<!--ログインできなかった際にloginBeanのEmsgを表示-->
+		<c:if test="${!empty loginBean.getEmsg()}">
 		<p class="text">${loginBean.getEmsg()}</p>
+		</c:if>
 		<div class="form">
 			<p>ユーザ名</p>
 			<input type="text" name="username">

@@ -46,7 +46,7 @@
 				<td>商品名${item.product.name}</td>
 				<td>金額${item.product.price}円</td>
 				<td>個数${item.count}</td>
-				<td><a href="UserCartRemoveServret?id=${item.product.id}">カートから削除</a></td>
+				<td><a href="UserCartRemove.action?id=${item.product.id}">カートから削除</a></td>
 
 
 				<%
@@ -75,6 +75,7 @@
 		</c:forEach>
 	</table>
 	<a href="UserShopping.action">購入確認へ進む</a>
+	<a href="userMain.jsp">買い物を続ける</a>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
  *
  */
 
-package jp.co.aforce.servlets;
+package views.user;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import jp.co.aforce.beans.ItemBean;
 import tool.Action;
 
-public class UserCartRemoveServlet extends Action {
+public class UserCartRemoveAction extends Action {
 
 	@SuppressWarnings("unchecked")
 
@@ -23,7 +23,7 @@ public class UserCartRemoveServlet extends Action {
 
 		HttpSession session = request.getSession();
 
-		int product_id = Integer.parseInt(request.getParameter("product_id"));
+		int product_id = Integer.parseInt(request.getParameter("id"));
 
 		List<ItemBean> cart = (List<ItemBean>) session.getAttribute("cart");
 
@@ -35,6 +35,6 @@ public class UserCartRemoveServlet extends Action {
 
 		}
 		//TODO カート画面のｊｓｐファイル名追加
-		return "cart.jsp";
+		return "userCart.jsp";
 	}
 }
