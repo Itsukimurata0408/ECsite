@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <title>商品削除画面</title>
 <link rel="stylesheet" type="text/css"
-	href="../../css/admin/deleteProduct.css">
+	href="${pageContext.request.contextPath}/css/admin/deleteProduct.css">
 </head>
 
 <body>
@@ -27,43 +27,43 @@
 
 		<p>${Smsg}</p>
 		<p>${Emsg}</p>
+		<div class="menu">
+			<form action="/ECsite/DeleteProductServlet" method="get">
 
-		<form action="/ECsite/DeleteProductServlet" method="get">
-			<table>
-				<tr>
-					<th>商品ID</th>
-					<th>商品名</th>
-					<th>画像</th>
-					<th>カテゴリー</th>
-					<th>価格</th>
-					<th>商品詳細</th>
-				</tr>
-				<div class="list">
+				<table>
 					<tr>
-
-						<c:forEach var="product" items="${productList}">
-
-							<td><input type="checkbox" name="delete"
-								value=${product.product_id}></td>
-							<td>${product.product_id}</td>
-							<td>${product.name}</td>
-							<td>${product.image}</td>
-							<td>${product.category}</td>
-							<td>${product.price}</td>
-							<td>${product.detail}</td>
-
-
-						</c:forEach>
+						<th>選択</th>
+						<th>商品ID</th>
+						<th>商品名</th>
+						<th>画像</th>
+						<th>カテゴリー</th>
+						<th>価格</th>
+						<th>商品詳細</th>
 					</tr>
-				</div>
-			</table>
+					<div class="list">
+						<c:forEach var="product" items="${productList}">
+							<tr>
+								<td><input type="checkbox" name="delete"
+									value=${product.product_id}></td>
+								<td>${product.product_id}</td>
+								<td>${product.name}</td>
+								<td>${product.image}</td>
+								<td>${product.category}</td>
+								<td>${product.price}</td>
+								<td>${product.detail}</td>
 
-			<div class="button">
-				<p>
+
+							</tr>
+						</c:forEach>
+
+					</div>
+				</table>
+
+				<div class="button">
 					<button type="submit">削除</button>
-				</p>
-			</div>
-		</form>
+				</div>
+			</form>
+		</div>
 
 	</main>
 </body>
