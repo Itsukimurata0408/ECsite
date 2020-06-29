@@ -5,11 +5,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>商品情報登録確認</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/admin/adminConfirm.css">
 </head>
 <body>
+<header>
+		<h4>商品情報登録確認</h4>
+		<button type="button" onclick="history.back()">←</button>
+	</header>
 
+<main>
 <form action="/ECsite/registerAdminServlet" method="post">
 <c:forEach var="rp" items="${product}">
 <table border="1">
@@ -48,6 +53,6 @@
 		</p>
 </c:forEach>
 	</form>
-
+</main>
 </body>
 </html>
