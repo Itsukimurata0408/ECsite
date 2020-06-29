@@ -14,7 +14,7 @@
 	<!--formタグの設定-->
 	<!--buttonもformタグ内に入れないと反応しないので注意する-->
 	<!-- autocomplete="off"で入力履歴を表示しないようにできる -->
-	<!--action　の後はweb.xmlで指定したものを記載-->
+	<!--actionの後はweb.xmlで指定したものを記載-->
 	<!--action="/プロジェクト名/url-patten" を書く-->
 	<form action="/ECsite/UserLoginServlet" method="post"
 		autocomplete="off">

@@ -29,7 +29,7 @@
 
 
 	<header>
-		<!-- jsp:include page="userHeader.jsp"/-->
+		<jsp:include page="userHeader.jsp"/>
 	</header>
 
 	<img src="${pageContext.request.contextPath}/img/table.jpeg"
@@ -37,11 +37,13 @@
 	<main class="explanation">
 		<!-- 軽めな県紹介 -->
 		<h2>ABOUT</h2>
+
 		<div class="ex">
 			<p>笑顔咲くたび 伊達な旅</p>
 			<p>海にも山にも囲まれている宮城県</p>
 			<p>日本中 世界中の皆様へ自慢の特産品で笑顔をお届けします</p>
 		</div>
+
 
 
 
