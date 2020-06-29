@@ -18,12 +18,16 @@
 <c:forEach var="number" items="${select}">
 
 <%--検索結果をEL方式で表示 --%>
+<table>
 
-		<p>商品ID：${number.id}</p>
-		<p>商品名：${number.name}</p>
-		<p>値段：${number.price}</p>
-		<p>商品詳細：${number.detail}</p>
-		<img src="./img/${number.image}">
+<tr>
+		<td>商品ID：${number.id}</td>
+		<td>商品名：${number.name}</td>
+		<td>値段：${number.price}</td>
+		<td>商品詳細：${number.detail}</td>
+		<td><img src="./img/${number.image}"></td>
+</tr>
+</table>
 </c:forEach>
 
 
